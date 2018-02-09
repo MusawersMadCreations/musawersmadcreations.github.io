@@ -13,11 +13,16 @@ function draw() {
 }
 
 function mousePressed() {
-  noStroke();
-  fill(random(255), random(255), random(255), random(255));
 
   if (mouseButton === LEFT) {
-    rect(mouseX, mouseY, random(50, 150), random(50, 150));
+    clear();
+    fill(255,0,0);
+    ellipse(mouseX,mouseY,50,50);
+    fill(255,255,255);
+    ellipse(mouseX,mouseY,30,30);
+    fill(0,0,0,);
+    ellipse(mouseX,mouseY,10,10);
+
   }
   else if (mouseButton === RIGHT) {
     ellipse(mouseX, mouseY, random(50, 200), random(50, 200));
@@ -25,7 +30,7 @@ function mousePressed() {
 }
 
 function keyPressed() {
-  if (key === 'w' || key === 'W') {
+  if (key === 'r' || key === 'R') {
     background(255);
   }
   else if (key === 'b' || key === 'B') {
