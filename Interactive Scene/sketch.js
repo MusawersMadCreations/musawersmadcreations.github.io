@@ -13,9 +13,12 @@ duck = loadImage("images/duck.png");
 function setup() {
   createCanvas(windowWidth, windowHeight);
   document.addEventListener("contextmenu", event => event.preventDefault())
+
 }
 
 function draw() {
+  image(duck,200,200,[50],[50])
+
 }
 
 function mousePressed() {
