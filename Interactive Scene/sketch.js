@@ -1,7 +1,14 @@
 // mouse and keyboard interaction
-// Dan Schellenberg
-// Feb 8, 2018
+// Musawer
+// Feb 9, 2018
 
+let duck;
+
+
+
+function preload(){
+duck = loadImage("images/duck.png");
+}
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -22,18 +29,11 @@ function mousePressed() {
     ellipse(mouseX,mouseY,30,30);
     fill(0,0,0,);
     ellipse(mouseX,mouseY,10,10);
-
-  }
-  else if (mouseButton === RIGHT) {
-    ellipse(mouseX, mouseY, random(50, 200), random(50, 200));
   }
 }
 
 function keyPressed() {
   if (key === 'r' || key === 'R') {
     background(255);
-  }
-  else if (key === 'b' || key === 'B') {
-    background(0);
   }
 }
