@@ -17,14 +17,20 @@ function setup() {
 }
 
 function draw() {
-  image(duck,200,200,[50],[50])
+  if (mouseIsPressed) {
+    displayTarget();
+  }
+  if (mouseY && mouseX)
+  // image(duck,200,200,[50],[50]);
+
+
 
 }
 
-function mousePressed() {
+function displayTarget() {
 
   if (mouseButton === LEFT) {
-    clear();
+    background(255);
     fill(255,0,0);
     ellipse(mouseX,mouseY,50,50);
     fill(255,255,255);
