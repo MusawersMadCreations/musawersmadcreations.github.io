@@ -1,27 +1,35 @@
 // mouse and keyboard interaction
 // Musawer
 // Feb 9, 2018
-
-let duck;
+let x,y;
+let nyanCat;
+let redChange,greenChange,blueChange;
 
 
 
 function preload(){
-duck = loadImage("images/duck.png");
+  nyanCat = loadImage("images/cat.png");
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  document.addEventListener("contextmenu", event => event.preventDefault())
-
+  redChange = 0;
+  greenChange = 0;
+  blueChange = 0;
 }
 
 function draw() {
+
+  image(nyanCat, width/2, height/2 , [200] , [200] );
+
+  rainbowBackground();
   if (mouseIsPressed) {
     displayTarget();
+
   }
-  if (mouseY && mouseX)
-  // image(duck,200,200,[50],[50]);
+
+
+  background(redChange, greenChange, blueChange);
 
 
 
@@ -30,18 +38,29 @@ function draw() {
 function displayTarget() {
 
   if (mouseButton === LEFT) {
-    background(255);
+    clear();
     fill(255,0,0);
     ellipse(mouseX,mouseY,50,50);
     fill(255,255,255);
     ellipse(mouseX,mouseY,30,30);
-    fill(0,0,0,);
+    fill(0,0,0);
     ellipse(mouseX,mouseY,10,10);
   }
 }
 
-function keyPressed() {
-  if (key === 'r' || key === 'R') {
-    background(255);
+function rainbowBackground(){
+  redChange += 5;
+  greenChange += 3;
+  blueChange += 1;
+  if (redChange === 255) {
+    redChange = 0;
   }
+  if (greenChange === 255) {
+    greenChange = 0;
+  }
+  if (blueChange === 255) {
+    blueChange = 0;
+  }
+  background(redChange, greenChange, blueChange);
+
 }
