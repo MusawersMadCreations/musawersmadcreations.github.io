@@ -20,18 +20,9 @@ function setup() {
 
 function draw() {
 
-  image(nyanCat, width/2, height/2 , [200] , [200] );
-
   rainbowBackground();
-  if (mouseIsPressed) {
-    displayTarget();
 
-  }
-
-
-  background(redChange, greenChange, blueChange);
-
-
+  image(nyanCat, width/2, height/2);
 
 }
 

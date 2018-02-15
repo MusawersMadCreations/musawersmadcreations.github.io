@@ -30,7 +30,8 @@ function draw() {
 
 function displayThing (){
   fill(0);
-  image(dvd,x,y,)
+  image(dvd,x,y);
+
   // ellipse(x,y,radius*2,radius * 2);
 }
 function moveThing(){
