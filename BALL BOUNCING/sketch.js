@@ -3,9 +3,11 @@
 // global variables
 let x,y, radius;
 let xchange, ychange;
+let dvd;
+
 
 function preload() {
-  // gear = loadImage("images/gear.png");
+  dvd = loadImage("images/dvd.png");
 }
 
 // the setup function will only run once (before the draw loop begins)
@@ -28,7 +30,8 @@ function draw() {
 
 function displayThing (){
   fill(0);
-  ellipse(x,y,radius*2,radius * 2);
+  image(dvd,x,y,)
+  // ellipse(x,y,radius*2,radius * 2);
 }
 function moveThing(){
   x += xchange;
@@ -38,4 +41,5 @@ function moveThing(){
   }
   if (x + radius >= width || x + radius >= 0) {
     xchange = xchange * -1;
+  }
 }
