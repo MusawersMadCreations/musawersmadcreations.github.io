@@ -1,7 +1,7 @@
 // mouse and keyboard interaction
 // Musawer
 // Feb 9, 2018
-let x,y;
+let catx,caty;
 let nyanCat,star;
 let redChange,greenChange,blueChange;
 
@@ -10,10 +10,13 @@ let redChange,greenChange,blueChange;
 function preload(){
   nyanCat = loadImage("images/cat.png");
   star = loadImage("images/star.png");
+
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  catx = width/2 - 450;
+  caty = height/2;
   redChange = 0;
   greenChange = 0;
   blueChange = 0;
@@ -47,13 +50,15 @@ function makeStars(){
   if (mouseButton === LEFT) {
     image(star,random(width),random(height));
   }
-  // else if (mouseButton === RIGHT) {
-  //   break
-  // }
-
+  else if (mouseButton === RIGHT) {
+    break 
+  }
 }
 
 function nyanCatMove (){
-  image(nyanCat, width/2 - 450 , height/2);
+  image(nyanCat, catx , caty);
+  if (catx <= width/2 - 750) && (caty <= height/2 +300){
+
+  }
 
 }
