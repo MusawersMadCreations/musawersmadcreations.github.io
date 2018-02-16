@@ -2,13 +2,14 @@
 // Musawer
 // Feb 9, 2018
 let x,y;
-let nyanCat;
+let nyanCat,star;
 let redChange,greenChange,blueChange;
 
 
 
 function preload(){
   nyanCat = loadImage("images/cat.png");
+  star = loadImage("images/star.png");
 }
 
 function setup() {
@@ -21,8 +22,8 @@ function setup() {
 function draw() {
 
   rainbowBackground();
-
-  image(nyanCat, width/2, height/2);
+  makeStars();
+  image(nyanCat, width/2 - 450 , height/2);
 
 }
 
@@ -56,7 +57,9 @@ function rainbowBackground(){
 
 }
 function makeStars(){
-  if mouseClicked(){
-    
+  if (mouseButton === LEFT) {
+    image(star,random(width),random(height))
   }
+
+
 }
