@@ -23,27 +23,14 @@ function draw() {
 
   rainbowBackground();
   makeStars();
-  image(nyanCat, width/2 - 450 , height/2);
+  nyanCatMove();
 
-}
-
-function displayTarget() {
-
-  if (mouseButton === LEFT) {
-    clear();
-    fill(255,0,0);
-    ellipse(mouseX,mouseY,50,50);
-    fill(255,255,255);
-    ellipse(mouseX,mouseY,30,30);
-    fill(0,0,0);
-    ellipse(mouseX,mouseY,10,10);
-  }
 }
 
 function rainbowBackground(){
-  redChange += 5;
-  greenChange += 3;
-  blueChange += 1;
+  redChange += 3;
+  greenChange += 1;
+  blueChange += 5;
   if (redChange === 255) {
     redChange = 0;
   }
@@ -58,8 +45,15 @@ function rainbowBackground(){
 }
 function makeStars(){
   if (mouseButton === LEFT) {
-    image(star,random(width),random(height))
+    image(star,random(width),random(height));
   }
+  // else if (mouseButton === RIGHT) {
+  //   break
+  // }
 
+}
+
+function nyanCatMove (){
+  image(nyanCat, width/2 - 450 , height/2);
 
 }
