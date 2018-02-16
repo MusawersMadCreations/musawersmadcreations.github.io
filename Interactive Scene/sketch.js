@@ -55,3 +55,8 @@ function rainbowBackground(){
   background(redChange, greenChange, blueChange);
 
 }
+function makeStars(){
+  if mouseClicked(){
+    
+  }
+}
