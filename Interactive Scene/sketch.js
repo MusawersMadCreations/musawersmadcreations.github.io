@@ -1,10 +1,16 @@
 // mouse and keyboard interaction
 // Musawer
 // Feb 9, 2018
+// This is a program that imitates the popular pop culture meme nyan cat
+// some of the keys you should know is left click is to enable stars, "m" is for mute and "n" is for unmute
+// enjoy the meme
+
+
+
 let catx,caty;
 let nyanCat,star,star2;
 let redChange,greenChange,blueChange;
-let isMovingUp, isMovingDown, isMovingLeft, isMovingRight;
+let catSpeed;
 
 
 
@@ -25,16 +31,13 @@ function setup() {
   redChange = 0;
   greenChange = 0;
   blueChange = 0;
-  isMovingUp = false;
-  isMovingDown = false;
-  isMovingLeft = false;
-  isMovingRight = false;
-
+  catSpeed = 5;
 }
 
 function draw() {
 
   rainbowBackground();
+  writeText();
   makeStars();
   nyanCatMove();
 
@@ -73,7 +76,18 @@ function makeStars(){
 
 function nyanCatMove (){
   image(nyanCat,catx,caty,250,100);
-
+  if (key == 'w' || key == 'W') {
+   caty = caty - catSpeed;
+ }
+ else if (key == 's' || key == 'S') {
+   caty = caty + catSpeed;
+ }
+ if (key == 'a' || key == 'A') {
+   catx = catx - catSpeed;
+ }
+ else if (key == 'd' || key == 'D') {
+   catx = catx + catSpeed;
+ }
 }
 
 function keyPressed() {
@@ -82,6 +96,12 @@ function keyPressed() {
   }
   else if (key === 'n' || key === 'N') {
     song.setVolume(0.1);
-  }
 
+  }
+}
+
+function writeText(){
+  words = 75
+  textSize(words);
+  text("NYAN CAT SIMULATOR",width/2 - 425,height/2 - 300);
 }
