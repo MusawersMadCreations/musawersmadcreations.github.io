@@ -2,24 +2,30 @@
 // Musawer
 // Feb 9, 2018
 let catx,caty;
-let nyanCat,star;
+let nyanCat,star,star2;
 let redChange,greenChange,blueChange;
+let isMovingUp, isMovingDown, isMovingLeft, isMovingRight;
 
 
 
 function preload(){
   nyanCat = loadImage("images/cat.png");
   star = loadImage("images/star.png");
-
+  star2 = loadImage("images/star2.png");
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  catx = width/2 - 450;
+  document.addEventListener("contextmenu", event => event.preventDefault())
+  catx = width/2 - 150;
   caty = height/2;
   redChange = 0;
   greenChange = 0;
   blueChange = 0;
+  isMovingUp = false;
+  isMovingDown = false;
+  isMovingLeft = false;
+  isMovingRight = false;
 }
 
 function draw() {
@@ -51,14 +57,11 @@ function makeStars(){
     image(star,random(width),random(height));
   }
   else if (mouseButton === RIGHT) {
-    break 
+    image(star2,random(width),random(height));
   }
 }
 
 function nyanCatMove (){
-  image(nyanCat, catx , caty);
-  if (catx <= width/2 - 750) && (caty <= height/2 +300){
-
-  }
+  image(nyanCat,catx,caty,250,100);
 
 }
