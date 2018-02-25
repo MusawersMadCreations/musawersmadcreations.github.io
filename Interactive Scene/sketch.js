@@ -12,9 +12,11 @@ function preload(){
   nyanCat = loadImage("images/cat.png");
   star = loadImage("images/star.png");
   star2 = loadImage("images/star2.png");
+  song = loadSound("music/song.mp3");
 }
 
 function setup() {
+  playThemeSong();
   createCanvas(windowWidth, windowHeight);
   document.addEventListener("contextmenu", event => event.preventDefault())
   catx = width/2 - 150;
@@ -26,6 +28,7 @@ function setup() {
   isMovingDown = false;
   isMovingLeft = false;
   isMovingRight = false;
+
 }
 
 function draw() {
@@ -52,6 +55,12 @@ function rainbowBackground(){
   background(redChange, greenChange, blueChange);
 
 }
+
+function playThemeSong (){
+  song.setVolume(0.1);
+  song.play();
+}
+
 function makeStars(){
   if (mouseButton === LEFT) {
     image(star,random(width),random(height));
