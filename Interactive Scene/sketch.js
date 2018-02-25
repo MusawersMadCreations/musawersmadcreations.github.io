@@ -13,6 +13,7 @@ function preload(){
   star = loadImage("images/star.png");
   star2 = loadImage("images/star2.png");
   song = loadSound("music/song.mp3");
+
 }
 
 function setup() {
@@ -56,7 +57,7 @@ function rainbowBackground(){
 
 }
 
-function playThemeSong (){
+function playThemeSong(){
   song.setVolume(0.1);
   song.play();
 }
@@ -72,5 +73,15 @@ function makeStars(){
 
 function nyanCatMove (){
   image(nyanCat,catx,caty,250,100);
+
+}
+
+function keyPressed() {
+  if (key === 'm' || key === 'M') {
+    song.setVolume(0);
+  }
+  else if (key === 'n' || key === 'N') {
+    song.setVolume(0.1);
+  }
 
 }
