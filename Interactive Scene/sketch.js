@@ -11,7 +11,7 @@ let catx,caty;
 let nyanCat,star,star2;
 let redChange,greenChange,blueChange;
 let catSpeed;
-
+let song;
 
 
 function preload(){
@@ -31,7 +31,7 @@ function setup() {
   redChange = 0;
   greenChange = 0;
   blueChange = 0;
-  catSpeed = 5;
+  catSpeed = 30;
 }
 
 function draw() {
@@ -75,7 +75,7 @@ function makeStars(){
 }
 
 function nyanCatMove (){
-  image(nyanCat,catx,caty,250,100);
+  image(nyanCat,catx,caty);
   if (key == 'w' || key == 'W') {
    caty = caty - catSpeed;
  }
@@ -91,17 +91,17 @@ function nyanCatMove (){
 }
 
 function keyPressed() {
-  if (key === 'm' || key === 'M') {
+  if (key === "m" || key === "M") {
     song.setVolume(0);
   }
-  else if (key === 'n' || key === 'N') {
+  else if (key === "n" || key === "N") {
     song.setVolume(0.1);
 
   }
 }
 
 function writeText(){
-  words = 75
+  words = 75;
   textSize(words);
   text("NYAN CAT SIMULATOR",width/2 - 425,height/2 - 300);
 }
