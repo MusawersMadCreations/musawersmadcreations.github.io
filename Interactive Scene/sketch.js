@@ -11,7 +11,7 @@ let catx,caty;
 let nyanCat,star,star2;
 let redChange,greenChange,blueChange;
 let catSpeed;
-
+let state;
 
 
 function preload(){
@@ -31,7 +31,8 @@ function setup() {
   redChange = 0;
   greenChange = 0;
   blueChange = 0;
-  catSpeed = 5;
+  catSpeed = 10;
+
 }
 
 function draw() {
@@ -40,7 +41,6 @@ function draw() {
   writeText();
   makeStars();
   nyanCatMove();
-
 }
 
 function rainbowBackground(){
@@ -76,19 +76,34 @@ function makeStars(){
 
 function nyanCatMove (){
   image(nyanCat,catx,caty,250,100);
+
   if (key == 'w' || key == 'W') {
    caty = caty - catSpeed;
+   if (caty < -10){
+     caty = -10
+   }
  }
  else if (key == 's' || key == 'S') {
    caty = caty + catSpeed;
+   if (caty >= height - 110){
+     caty = height - 110
+   }
  }
  if (key == 'a' || key == 'A') {
    catx = catx - catSpeed;
+   if (catx < 0){
+     catx = 0
+   }
  }
  else if (key == 'd' || key == 'D') {
    catx = catx + catSpeed;
+   if (catx >= width - 260){
+     catx = width - 260
+   }
  }
+
 }
+
 
 function keyPressed() {
   if (key === 'm' || key === 'M') {
@@ -101,7 +116,7 @@ function keyPressed() {
 }
 
 function writeText(){
-  words = 75
+  words = 75;
   textSize(words);
   text("NYAN CAT SIMULATOR",width/2 - 425,height/2 - 300);
 }
