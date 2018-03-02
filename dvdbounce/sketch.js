@@ -25,44 +25,51 @@ function setup() {
 
 function draw() {
   background(255);
-  startSreen();
-  moveThing();
-  displayThing();
-}
-
-function startSreen(){
-  if (state === 1){
-    background(255)
-    rect(width/2,height/2,300,100)
-    if (mouseClicked()){
-      state === 2;
-    }
+  if (state === 2) {
+    moveThing();
+    displayThing();
+  }
+  if (state === 1) {
+    startSreen();
   }
 }
+
+function startSreen() {
+  let buttonWidth = 400;
+  let buttonHeight = 200;
+  let leftSide = width / 2 - buttonWidth;
+  let topSide = height / 2 - buttonHeight;
+  let rightSide = leftSide + buttonWidth;
+  let bottomSide = topSide + buttonHeight;
+  fill (0);
+  if (mouseIsPressed && mouseX >= leftSide && mouseX <= rightSide && mouseY >= topSide && mouseY <= bottomSide) {
+    state = 2;
+  }
+
+  rect(leftSide, topSide, buttonWidth, buttonHeight);
+}
+
 
 function moveThing() {
   x += dx;
   y += dy;
 
   //check if bounce required
-  if (state === 2) {
-    if (y + dvd.height / 2 >= height || y - dvd.height / 2 <= 0) {
-      dy = dy * -1;
-      dvdColor = color(random(255), random(255));
-    }
+  if (y + dvd.height / 2 >= height || y - dvd.height / 2 <= 0) {
+    dy = dy * -1;
+    dvdColor = color(random(255), random(255));
+  }
 
-    if (x + dvd.width / 2 >= width || x - dvd.width / 2 <= 0) {
-      dx = dx * -1;
-      dvdColor = color(random(255), random(255));
-    }
+  if (x + dvd.width / 2 >= width || x - dvd.width / 2 <= 0) {
+    dx = dx * -1;
+    dvdColor = color(random(255), random(255));
   }
 }
+
 function displayThing() {
-  if (state === 2){
-    fill(0);
-    // ellipse(x, y, radius * 2, radius * 2);
-    imageMode(CENTER);
-    tint(dvdColor);
-    image(dvd, x, y);
-  }
+  fill(0);
+  // ellipse(x, y, radius * 2, radius * 2);
+  imageMode(CENTER);
+  tint(dvdColor);
+  image(dvd, x, y);
 }
