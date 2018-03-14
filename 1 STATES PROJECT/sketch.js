@@ -11,6 +11,15 @@ let box = {
   height: 125,
 
 };
+let button = {
+  x: 300,
+  y: 660,
+  left: 300,
+  right: 600,
+  top: 670,
+  bottom: 770,
+  words: "Start",
+};
 
 function preload() {
   goodLuckImg = loadImage("images/goodluck.png");
@@ -42,15 +51,7 @@ function draw() {
   }
 }
 
-function button() {
-  let button = {
-    x: 300,
-    y: 660,
-    left: 300,
-    right: 600,
-    top: 670,
-    bottom: 770,
-  };
+function buttonIsPressed() {
 
   if (mouseX >= button.left && mouseX <= button.right && mouseY >= button.top && mouseY <= button.bottom && mouseIsPressed) {
     state = "act1";
@@ -58,7 +59,7 @@ function button() {
 
   rect(button.x, button.y, 250, 70, 15);
   textSize(40);
-  text("Start", button.x + 80, button.y + 47);
+  text(button.words, button.x + 80, button.y + 47);
 }
 
 function makeTextBox() {
@@ -67,7 +68,7 @@ function makeTextBox() {
 
 function TitleScreen() {
   image(goodLuckImg, box.x + 325, box.y + 175);
-  button();
+  buttonIsPressed();
   box.height = 110;
   textSize(50);
   text("Welcome to the game of choices", box.x + 130, box.y - 20);
@@ -80,8 +81,9 @@ function TitleScreen() {
 }
 
 function act1() {
-  button.x = 800;
-  button();
+  button.x = 65;
+  button.words = "Play Hookey";
+  buttonIsPressed();
   box.height = 110;
   box.width = 850;
   textSize(50);
@@ -90,6 +92,6 @@ function act1() {
   text("YAAAAAWN, you wake up and glance at your alarm clock. OH SHIT your late for school what do you .", box.x + 15, box.y + 25);
   text("After rolling around in your bed for a while you realize you have to get up", box.x + 70, box.y + 50);
   text("What Will You Do", box.x + 350, box.y + 75);
-  image(clockImg,box.x + 20, box.y + 125);
+  image(clockImg,box.x + 0, box.y + 112);
 
 }
