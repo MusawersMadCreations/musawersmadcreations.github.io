@@ -20,7 +20,8 @@ let button = {
   bottom: 770,
   words: "Start",
   textsize: 30,
-
+  textX: this.x + 80,
+  textY: this.y + 47,
 };
 
 function preload() {
@@ -61,7 +62,7 @@ function buttonIsPressed() {
   rect(button.x, button.y, 250, 70, 15);
   button.textsize = 45;
   textSize(button.textsize);
-  text(button.words, button.x + 80, button.y + 47);
+  text(button.words, button.textX, button.textY);
 }
 
 function makeTextBox() {
@@ -81,7 +82,9 @@ function TitleScreen() {
 }
 
 function act1() {
-  button.x = 1250, button.words = "Play Hookey", box.height = 110, box.width = 850;
+  button.x = 1250, button.y = 600, button.words = "Play Hookey", box.height = 110, box.width = 850;
+  buttonIsPressed();
+  button.x = 1250, button.y = 400, button.words = "Go To School", box.height = 110, box.width = 850;
   buttonIsPressed();
   textSize(50);
   text("Day 1", box.x + 15, box.y - 20);
@@ -89,5 +92,11 @@ function act1() {
   text("YAAAAAWN, you wake up and glance at your alarm clock. OH SHIT your late for school what do you .", box.x + 15, box.y + 25);
   text("After rolling around in your bed for a while you realize you have to get up", box.x + 70, box.y + 50);
   text("What Will You Do", box.x + 350, box.y + 75);
-  //image(clockImg, box.x + 0, box.y + 112);
+  image(clockImg, box.x , box.y + 112);
+  if (state === "act1A"){
+    print("act 1 A");
+  }
+  if (state === "act1B"){
+    print("Act 1 B");
+  }
 }
