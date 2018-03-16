@@ -36,11 +36,11 @@ function setup() {
 }
 
 function draw() {
-  if (mouseIsPressed) {
-    print(mouseX, "X");
-    print(mouseY, "Y");
-
-  }
+  // if (mouseIsPressed) {
+  //   print(mouseX, "X");
+  //   print(mouseY, "Y");
+  //
+  // }
 
   if (state === "StartScreen") {
     makeTextBox();
@@ -93,10 +93,5 @@ function act1() {
   text("After rolling around in your bed for a while you realize you have to get up", box.x + 70, box.y + 50);
   text("What Will You Do", box.x + 350, box.y + 75);
   image(clockImg, box.x , box.y + 112);
-  if (state === "act1A"){
-    print("act 1 A");
-  }
-  if (state === "act1B"){
-    print("Act 1 B");
-  }
+
 }
