@@ -2,7 +2,7 @@
 // Musawer
 // March 6, 2018
 
-let state;
+let state, newState;
 let goodLuckImg, clockImg;
 let box = {
   x: 300,
@@ -33,6 +33,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
   state = "StartScreen";
+  newState = "";
 }
 
 function draw() {
@@ -52,11 +53,16 @@ function draw() {
     makeTextBox();
     act1();
   }
+  if (state === "act1A") {
+    background(255);
+    makeTextBox();
+    act1();
+  }
 }
 
 function buttonIsPressed() {
   if (mouseX >= button.left && mouseX <= button.right && mouseY >= button.top && mouseY <= button.bottom && mouseIsPressed) {
-    state = "act1";
+    state = newState;
   }
 
   rect(button.x, button.y, 250, 70, 15);
@@ -71,6 +77,7 @@ function makeTextBox() {
 
 function TitleScreen() {
   image(goodLuckImg, box.x + 325, box.y + 175);
+  newState = "act1";
   buttonIsPressed();
   box.height = 110;
   textSize(50);
@@ -83,8 +90,10 @@ function TitleScreen() {
 
 function act1() {
   button.x = 1250, button.y = 600, button.words = "Play Hookey", box.height = 110, box.width = 850;
+  newState = "act1A";
   buttonIsPressed();
   button.x = 1250, button.y = 400, button.words = "Go To School", box.height = 110, box.width = 850;
+  // newState = "act1B";
   buttonIsPressed();
   textSize(50);
   text("Day 1", box.x + 15, box.y - 20);
@@ -93,5 +102,7 @@ function act1() {
   text("After rolling around in your bed for a while you realize you have to get up", box.x + 70, box.y + 50);
   text("What Will You Do", box.x + 350, box.y + 75);
   image(clockImg, box.x , box.y + 112);
-
+}
+function act1A(){
+  background(255);
 }
