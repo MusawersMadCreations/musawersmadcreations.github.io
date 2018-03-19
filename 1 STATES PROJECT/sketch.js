@@ -20,8 +20,8 @@ let button = {
   bottom: 770,
   words: "Start",
   textsize: 30,
-  textX: this.x + 80,
-  textY: this.y + 47,
+  // textX: this.x + 80,
+  // textY: this.y + 47,
 };
 
 function preload() {
@@ -50,13 +50,14 @@ function draw() {
 
   if (state === "act1") {
     background(255);
-    makeTextBox();
     act1();
+    makeTextBox();
+
   }
   if (state === "act1A") {
     background(255);
+    act1A();
     makeTextBox();
-    act1();
   }
 }
 
@@ -76,10 +77,10 @@ function makeTextBox() {
 }
 
 function TitleScreen() {
-  image(goodLuckImg, box.x + 325, box.y + 175);
+  box.height = 110;
   newState = "act1";
   buttonIsPressed();
-  box.height = 110;
+  image(goodLuckImg, box.x + 325, box.y + 175);
   textSize(50);
   text("Welcome to the game of choices", box.x + 130, box.y - 20);
   textSize(18);
@@ -93,7 +94,7 @@ function act1() {
   newState = "act1A";
   buttonIsPressed();
   button.x = 1250, button.y = 400, button.words = "Go To School", box.height = 110, box.width = 850;
-  // newState = "act1B";
+  newState = "act1B";
   buttonIsPressed();
   textSize(50);
   text("Day 1", box.x + 15, box.y - 20);
