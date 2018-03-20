@@ -14,11 +14,16 @@ function setup() {
 function draw() {
   background(255);
   displayTerrain();
+  plantFlag();
 }
 
 function generateInitialTerrain(numberOfRectangles) {
+  let time = 0;
+  let dt = 0.005;
   for (let i=0; i<numberOfRectangles; i++) {
-    heights.push(noise(100, 500,29));
+    let currentHeight = noise(time)*500;
+    heights.push(currentHeight);
+    time += dt;
   }
 }
 
@@ -29,4 +34,16 @@ function displayTerrain() {
   for (let i=0; i<numberOfRectangles; i++) {
     rect(i*rectWidth, height, (i+1)*rectWidth, height - heights[i]);
   }
+}
+
+function plantFlag(){
+  let tallest = 0;
+  for (let i=0; i<heights.lenght;i++){
+    if (heights[i] > tallest){
+      tallest = heights[i];
+    }
+  }
+  stroke(255,0,0);
+  line(0,tallest,width,height);
+
 }
