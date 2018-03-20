@@ -10,7 +10,7 @@ let box = {
   height: 125,
 };
 let button = {
-  x: box.x,
+  x: 300,
   y: 660,
   left: 300,
   right: 600,
@@ -18,6 +18,4 @@ let button = {
   bottom: 770,
   words: "Start",
   textsize: 30,
-  textX: this.x + 80,
-  textY: this.y + 47,
 };
