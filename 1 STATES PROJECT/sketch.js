@@ -20,8 +20,11 @@ let button = {
   bottom: 770,
   words: "Start",
   textsize: 30,
-  // textX: this.x + 80,
-  // textY: this.y + 47,
+};
+
+let buttontext = {
+  x: 370,
+  y: 710,
 };
 
 function preload() {
@@ -61,6 +64,10 @@ function draw() {
   }
 }
 
+function makeTextBox() {
+  rect(box.x, box.y, box.width, box.height, 25);
+}
+
 function buttonIsPressed() {
   if (mouseX >= button.left && mouseX <= button.right && mouseY >= button.top && mouseY <= button.bottom && mouseIsPressed) {
     state = newState;
@@ -69,11 +76,7 @@ function buttonIsPressed() {
   rect(button.x, button.y, 250, 70, 15);
   button.textsize = 45;
   textSize(button.textsize);
-  text(button.words, button.textX, button.textY);
-}
-
-function makeTextBox() {
-  rect(box.x, box.y, box.width, box.height, 25);
+  text(button.words, buttontext.x, buttontext.y);
 }
 
 function TitleScreen() {
@@ -90,12 +93,6 @@ function TitleScreen() {
 }
 
 function act1() {
-  button.x = 1250, button.y = 600, button.words = "Play Hookey", box.height = 110, box.width = 850;
-  newState = "act1A";
-  buttonIsPressed();
-  button.x = 1250, button.y = 400, button.words = "Go To School", box.height = 110, box.width = 850;
-  newState = "act1B";
-  buttonIsPressed();
   textSize(50);
   text("Day 1", box.x + 15, box.y - 20);
   textSize(18);
@@ -103,7 +100,18 @@ function act1() {
   text("After rolling around in your bed for a while you realize you have to get up", box.x + 70, box.y + 50);
   text("What Will You Do", box.x + 350, box.y + 75);
   image(clockImg, box.x , box.y + 112);
+  if (state = "act1"){
+    buttontext.x + 400, buttontext.y + 400;
+    button.x = 1250, button.y = 600, button.words = "Play Hookey", box.height = 110, box.width = 850;
+    newState = "act1A";
+    buttonIsPressed();
+  }
+  if (state = "act1"){
+    button.x = 1250, button.y = 400, button.words = "Go To School", box.height = 110, box.width = 850;
+    buttonIsPressed()
+  }
 }
+
 function act1A(){
   background(255);
 }
