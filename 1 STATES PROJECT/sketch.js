@@ -35,13 +35,12 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
-  state = "StartScreen";
+  state = "startScreen";
   newState = "";
 }
 
 function draw() {
-
-  if (state === "StartScreen") {
+  if (state === "startScreen") {
     makeTextBox();
     TitleScreen();
   }
@@ -52,7 +51,7 @@ function draw() {
     act1();
 
   }
-  if (state === "act1A" && buttonIsPressed()) {
+  if (state === "act1A") {
     background(255);
     act1A();
     makeTextBox();
@@ -90,8 +89,6 @@ function act1() {
   button.y = 600, button.words = "Play Hookey", button.textsize = 30, buttontext.x = 1297;
   newState = "Act1A";
   buttonIsPressed()
-
-
 
   // if (state = "act1"){
   //   button.y = 400, button.words = "Go To School", button.textsize = 25, buttontext.y = 400 ;
