@@ -4,7 +4,7 @@
 
 let state, newState;
 let goodLuckImg, clockImg, homelessImg;
-let buttonIsPressed;
+let buttonIsPressed, button2IsPressed;
 let box = {
   x: 300,
   y: 75,
@@ -23,9 +23,25 @@ let button = {
   textsize: 45,
 };
 
+let button2  = {
+  x: 1250,
+  y: 450,
+  left: 1250,
+  right: 1500,
+  top: 450,
+  bottom: 520,
+  words: "",
+  textsize: 45,
+};
+
 let buttontext = {
   x: 1325,
   y: 650,
+};
+
+let buttontext2 = {
+  x: 1325,
+  y: 500,
 };
 
 function preload() {
@@ -54,7 +70,7 @@ function draw() {
     makeTextBox();
     act1();
     makeButton();
-
+    makeButton2();
   }
 
   else if (state === "act1A") {
@@ -69,18 +85,16 @@ function draw() {
     makeTextBox();
     act1B();
     makeButton();
+    makeButton2();
   }
-
-  // else if (state === "gameOver" && buttonIsPressed) {
-  //   print("done");
-  // }
-
 
 }
 
 function mousePressed() {
   buttonIsPressed = mouseX >= button.left && mouseX <= button.right && mouseY >= button.top && mouseY <= button.bottom;
+  button2IsPressed = mouseX >= button2.left && mouseX <= button2.right && mouseY >= button2.top && mouseY <= button2.bottom;
 }
+
 
 function makeTextBox() {
   rect(box.x, box.y, box.width, box.height, 25);
@@ -90,6 +104,12 @@ function makeButton() {
   rect(button.x, button.y, 250, 70, 15);
   textSize(button.textsize);
   text(button.words, buttontext.x, buttontext.y);
+}
+
+function makeButton2() {
+  rect(button2.x, button2.y, 250, 70, 15);
+  textSize(button2.textsize);
+  text(button2.words, buttontext2.x, buttontext2.y);
 }
 
 function TitleScreen() {
@@ -108,13 +128,18 @@ function TitleScreen() {
 }
 
 function act1() {
-  // if (mouseY > 500 && mouseIsPressed){
-  button.y = 600, button.words = "Play Hookey", button.textsize = 30, buttontext.x = 1297;
-  // button.y = 300, button.words = "Go To School", button.textsize = 30, buttontext.x = 1290;
+  button.words = "Play Hookey", button.textsize = 30, buttontext.x = 1297;
+  button2.words = "Go To school", button2.textsize = 30, buttontext2.x = 1297;
   if (buttonIsPressed) {
     state = "act1A";
     buttonIsPressed = false;
   }
+
+  if (button2IsPressed) {
+    state = "act1B";
+    button2IsPressed = false;
+  }
+
   textSize(50);
   text("Day 1", box.x + 15, box.y - 20);
   textSize(18);
@@ -137,13 +162,8 @@ function act1A() {
   image(homelessImg, box.x, box.y + 112);
 }
 
-// function act1B() {
-//   button.y = 600, button.words = "", button.textsize = 30, buttontext.x = 1297;
-//   state = "gameOver";
-//   textSize(50);
-//   text("Day 7300", box.x + 15, box.y - 20);
-//   textSize(18);
-//   text("You started skipping school from that day on and ended up failing high school. As a result your lovely parents kicked", box.x + 35, box.y + 25);
-//   text("you out and you have been living on the streets from then on.", box.x + 250, box.y + 50);
-//   text("Better luck next time.", box.x + 400, box.y + 75);
-// }
+function act1B() {
+  button.words = "walk", button.textsize = 30, buttontext.x = 1297;
+  button2.words = "bike", button2.textsize = 30, buttontext2.x = 1297;
+
+}
