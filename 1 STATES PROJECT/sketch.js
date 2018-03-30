@@ -2,7 +2,8 @@
 // Musawer
 // March 6, 2018
 
-let state, newState;
+let state;
+let inventory;
 let goodLuckImg, clockImg, homelessImg;
 let buttonIsPressed, button2IsPressed;
 let box = {
@@ -45,16 +46,15 @@ let buttontext2 = {
 };
 
 function preload() {
-  goodLuckImg = loadImage("images/goodluck.png");
-  clockImg = loadImage("images/clock.png");
-  homelessImg = loadImage("images/homeless.jpg");
+  goodLuckImg = loadImage("images/goodluck.png"),clockImg = loadImage("images/clock.png"),homelessImg = loadImage("images/homeless.jpg"); ;
+  bikeImg = loadImage("images/bike.jpg");
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
   state = "startScreen";
-
+  inventory = [];
 
 }
 
@@ -128,8 +128,8 @@ function TitleScreen() {
 }
 
 function act1() {
-  button.words = "Play Hookey", button.textsize = 30, buttontext.x = 1297;
-  button2.words = "Go To school", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Play Hookey", button.textsize = 35, buttontext.x = 1280, box.width = 850;
+  button2.words = "Go To school", button2.textsize = 35, buttontext2.x = 1275;
   if (buttonIsPressed) {
     state = "act1A";
     buttonIsPressed = false;
@@ -163,7 +163,24 @@ function act1A() {
 }
 
 function act1B() {
-  button.words = "walk", button.textsize = 30, buttontext.x = 1297;
+  button.words = "walk", button.textsize = 30, buttontext.x = 1297, box.width = 925;
   button2.words = "bike", button2.textsize = 30, buttontext2.x = 1297;
+  if (buttonIsPressed) {
+    state = "act1BA";
+    buttonIsPressed = false;
+  }
+
+  if (button2IsPressed) {
+    state = "act1BB";
+    button2IsPressed = false;
+  }
+
+  textSize(50);
+  text("Day 1, 10:15am", box.x + 15, box.y - 20);
+  textSize(18);
+  text("You frantically jump out of your bed, run downstairs and quickly have a bowl of cereal then on your way out you.", box.x + 15, box.y + 25);
+  text("wonder whether you should quickly get to school on your bike or since you're already late, walk to school", box.x + 70, box.y + 50);
+  text("you could take your time and walk to school", box.x + 350, box.y + 75);
+  image(bikeImg, box.x, box.y + 112);
 
 }
