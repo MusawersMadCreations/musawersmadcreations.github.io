@@ -4,7 +4,8 @@
 
 let state;
 let inventory;
-let goodLuckImg, clockImg, homelessImg;
+// let boxAnimation;
+let goodLuckImg, clockImg, homelessImg, ringImg, classroomImg;
 let buttonIsPressed, button2IsPressed;
 let box = {
   x: 300,
@@ -24,7 +25,7 @@ let button = {
   textsize: 45,
 };
 
-let button2  = {
+let button2 = {
   x: 1250,
   y: 450,
   left: 1250,
@@ -46,8 +47,8 @@ let buttontext2 = {
 };
 
 function preload() {
-  goodLuckImg = loadImage("images/goodluck.png"),clockImg = loadImage("images/clock.png"),homelessImg = loadImage("images/homeless.jpg"); ;
-  bikeImg = loadImage("images/bike.jpg");
+  goodLuckImg = loadImage("images/goodluck.png"), clockImg = loadImage("images/clock.png"), homelessImg = loadImage("images/homeless.jpg");;
+  bikeImg = loadImage("images/bike.jpg"), ringImg = loadImage("images/ring.jpg"),classroomImg = loadImage("images/classroom.jpg");
 }
 
 function setup() {
@@ -55,39 +56,11 @@ function setup() {
   background(255);
   state = "startScreen";
   inventory = [];
-
+  // boxAnimation = rect(button.x - 10, button.y - 10, 275, 90);
 }
 
 function draw() {
-  if (state === "startScreen") {
-    makeTextBox();
-    makeButton();
-    TitleScreen();
-  }
-
-  else if (state === "act1") {
-    background(255);
-    makeTextBox();
-    act1();
-    makeButton();
-    makeButton2();
-  }
-
-  else if (state === "act1A") {
-    background(255);
-    makeTextBox();
-    act1A();
-    makeButton();
-  }
-
-  else if (state === "act1B") {
-    background(255);
-    makeTextBox();
-    act1B();
-    makeButton();
-    makeButton2();
-  }
-
+  playstory();
 }
 
 function mousePressed() {
@@ -112,7 +85,116 @@ function makeButton2() {
   text(button2.words, buttontext2.x, buttontext2.y);
 }
 
-function TitleScreen() {
+function playstory() {
+  if (state === "startScreen") {
+    makeTextBox();
+    makeButton();
+    titleScreen();
+  } else if (state === "act1") {
+    background(255);
+    makeTextBox();
+    act1();
+    makeButton();
+    makeButton2();
+  } else if (state === "act1A") {
+    background(255);
+    makeTextBox();
+    act1A();
+    makeButton();
+  } else if (state === "act1B") {
+    background(255);
+    makeTextBox();
+    act1B();
+    makeButton();
+    makeButton2();
+  } else if (state === "act2A") {
+    background(255);
+    makeTextBox();
+    act2A();
+    makeButton();
+    makeButton2();
+  } else if (state === "act2B") {
+    background(255);
+    makeTextBox();
+    act2B();
+    makeButton();
+    makeButton2();
+  } else if (state === "act3A") {
+    background(255);
+    makeTextBox();
+    act3A();
+    makeButton();
+    makeButton2();
+  } else if (state === "act3B") {
+    background(255);
+    makeTextBox();
+    act3B();
+    makeButton();
+    makeButton2();
+  } else if (state === "act4A") {
+    background(255);
+    makeTextBox();
+    act4A();
+    makeButton();
+    makeButton2();
+  } else if (state === "act4B") {
+    background(255);
+    makeTextBox();
+    act4B();
+    makeButton();
+    makeButton2();
+  } else if (state === "act5A") {
+    background(255);
+    makeTextBox();
+    act5A();
+    makeButton();
+    makeButton2();
+  } else if (state === "act5B") {
+    background(255);
+    makeTextBox();
+    act5B();
+    makeButton();
+    makeButton2();
+  } else if (state === "act6A") {
+    background(255);
+    makeTextBox();
+    act6A();
+    makeButton();
+    makeButton2();
+  } else if (state === "act6B") {
+    background(255);
+    makeTextBox();
+    act6B();
+    makeButton();
+    makeButton2();
+  } else if (state === "act7A") {
+    background(255);
+    makeTextBox();
+    act7A();
+    makeButton();
+    makeButton2();
+  } else if (state === "act7B") {
+    background(255);
+    makeTextBox();
+    act7B();
+    makeButton();
+    makeButton2();
+  } else if (state === "act8A") {
+    background(255);
+    makeTextBox();
+    act8A();
+    makeButton();
+    makeButton2();
+  } else if (state === "act8B") {
+    background(255);
+    makeTextBox();
+    act8B();
+    makeButton();
+    makeButton2();
+  }
+}
+
+function titleScreen() {
   box.height = 110;
   if (buttonIsPressed) {
     state = "act1";
@@ -166,12 +248,58 @@ function act1B() {
   button.words = "walk", button.textsize = 30, buttontext.x = 1297, box.width = 925;
   button2.words = "bike", button2.textsize = 30, buttontext2.x = 1297;
   if (buttonIsPressed) {
-    state = "act1BA";
+    state = "act2A";
     buttonIsPressed = false;
   }
 
   if (button2IsPressed) {
-    state = "act1BB";
+    state = "act2B";
+    button2IsPressed = false;
+  }
+
+  textSize(50);
+  text("Day 1, 10:15am", box.x + 15, box.y - 20);
+  textSize(18);
+  text("You frantically jump out of your bed, run downstairs and quickly have a bowl of cereal then on your way out you.", box.x + 15, box.y + 25);
+  text("wonder whether you should quickly get to school on your bike or since you're already late, walk to school", box.x + 70, box.y + 50);
+  text("you could take your time and walk to school", box.x + 350, box.y + 75);
+  image(bikeImg, box.x, box.y + 112);
+
+}
+
+function act2A() {
+  button.words = "Take Ring", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Leave It", button2.textsize = 30, buttontext2.x = 1297;
+  if (buttonIsPressed) {
+    state = "act2A";
+    buttonIsPressed = false;
+  }
+
+  if (button2IsPressed) {
+    state = "act2B";
+    button2IsPressed = false;
+  }
+
+  textSize(50);
+  text("Day 1, 10:15am", box.x + 15, box.y - 20);
+  textSize(18);
+  text("You frantically jump out of your bed, run downstairs and quickly have a bowl of cereal then on your way out you.", box.x + 15, box.y + 25);
+  text("wonder whether you should quickly get to school on your bike or since you're already late, walk to school", box.x + 70, box.y + 50);
+  text("you could take your time and walk to school", box.x + 350, box.y + 75);
+  image(bikeImg, box.x, box.y + 112);
+
+}
+
+function act2B() {
+  button.words = "Answer The Question", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Igore him", button2.textsize = 30, buttontext2.x = 1297;
+  if (buttonIsPressed) {
+    state = "act2A";
+    buttonIsPressed = false;
+  }
+
+  if (button2IsPressed) {
+    state = "act2B";
     button2IsPressed = false;
   }
 
