@@ -55,7 +55,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
   state = "startScreen";
-  inventory = [];
+  // inventory = [];
   // boxAnimation = rect(button.x - 10, button.y - 10, 275, 90);
 }
 
@@ -213,6 +213,7 @@ function playstory() {
     act5F();
     makeButton();
   }
+}
 
   function titleScreen() {
     box.height = 110;
