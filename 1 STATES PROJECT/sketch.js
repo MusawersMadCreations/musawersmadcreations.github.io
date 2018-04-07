@@ -131,61 +131,61 @@ function playstory() {
     act3B();
     makeButton();
     makeButton2();
-  } else if (state === "act4A") {
+  } else if (state === "act3C") {
     background(255);
     makeTextBox();
     act4A();
     makeButton();
     makeButton2();
-  } else if (state === "act4B") {
+  } else if (state === "act3D") {
     background(255);
     makeTextBox();
     act4B();
     makeButton();
     makeButton2();
-  } else if (state === "act5A") {
+  } else if (state === "act4A") {
     background(255);
     makeTextBox();
     act5A();
     makeButton();
     makeButton2();
-  } else if (state === "act5B") {
+  } else if (state === "act4B") {
     background(255);
     makeTextBox();
     act5B();
     makeButton();
     makeButton2();
-  } else if (state === "act6A") {
+  } else if (state === "act4C") {
     background(255);
     makeTextBox();
     act6A();
     makeButton();
     makeButton2();
-  } else if (state === "act6B") {
+  } else if (state === "act4D") {
     background(255);
     makeTextBox();
     act6B();
     makeButton();
     makeButton2();
-  } else if (state === "act7A") {
+  } else if (state === "act5A") {
     background(255);
     makeTextBox();
     act7A();
     makeButton();
     makeButton2();
-  } else if (state === "act7B") {
+  } else if (state === "act5B") {
     background(255);
     makeTextBox();
     act7B();
     makeButton();
     makeButton2();
-  } else if (state === "act8A") {
+  } else if (state === "act5C") {
     background(255);
     makeTextBox();
     act8A();
     makeButton();
     makeButton2();
-  } else if (state === "act8B") {
+  } else if (state === "act5D") {
     background(255);
     makeTextBox();
     act8B();
@@ -225,7 +225,7 @@ function act1() {
   textSize(50);
   text("Day 1", box.x + 15, box.y - 20);
   textSize(18);
-  text("YAAAAAWN, you wake up and glance at your alarm clock. OH SHIT your late for school what do you .", box.x + 15, box.y + 25);
+  text("YAAAAAWN, you wake up and glance at your alarm clock. OH SHIT your late for school what do you.", box.x + 15, box.y + 25);
   text("After rolling around in your bed for a while you realize you have to get up", box.x + 70, box.y + 50);
   text("What Will You Do", box.x + 350, box.y + 75);
   image(clockImg, box.x, box.y + 112);
@@ -282,17 +282,31 @@ function act2A() {
 
   textSize(50);
   text("Day 1, 10:30am", box.x + 15, box.y - 20);
+<<<<<<< HEAD
   textSize(18);
   text("You frantically jump out of your bed, run downstairs and quickly have a bowl of cereal then on your way out you.", box.x + 15, box.y + 25);
   text("wonder whether you should quickly get to school on your bike or since you're already late, walk to school", box.x + 70, box.y + 50);
   text("you could take your time and walk to school", box.x + 350, box.y + 75);
   image(bikeImg, box.x, box.y + 112);
+=======
+  textSize(16);
+  text("You grab your Air Macs and causualy walk to school knowing you will be late anyway. On the way there you hear a loud horn and", box.x, box.y + 25);
+  text("look behind you and see a rusty truck racing towards the side walk about to hit you. So you jump out of the way and land", box.x, box.y + 50);
+  text("on a large pile of dirt. Right after you jump the car swooooves back onto the street and you hear laughter from inside.", box.x, box.y + 75);
+  text("You wipe all the dirt from your clothes and noticed a shiny metal ring on the ground. Do you take it", box.x, box.y + 100)
+  image(ringImg, box.x, box.y + 112);
+>>>>>>> 7a195f7751ee06f80a99619cb0081d110814e057
 
 }
 
 function act2B() {
+<<<<<<< HEAD
   button.words = "Be a Savege", button.textsize = 30, buttontext.x = 1297, box.width = 925;
   button2.words = "Ignore him", button2.textsize = 30, buttontext2.x = 1297;
+=======
+  button.words = "Be A Savage", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Make Up Exscuse ", button2.textsize = 30, buttontext2.x = 1297;
+>>>>>>> 7a195f7751ee06f80a99619cb0081d110814e057
   if (buttonIsPressed) {
     state = "act2A";
     buttonIsPressed = false;
@@ -304,11 +318,80 @@ function act2B() {
   }
 
   textSize(50);
-  text("Day 1, 10:15am", box.x + 15, box.y - 20);
+  text("Day 1, 10:30am", box.x + 15, box.y - 20);
   textSize(18);
-  text("You frantically jump out of your bed, run downstairs and quickly have a bowl of cereal then on your way out you.", box.x + 15, box.y + 25);
-  text("wonder whether you should quickly get to school on your bike or since you're already late, walk to school", box.x + 70, box.y + 50);
-  text("you could take your time and walk to school", box.x + 350, box.y + 75);
-  image(bikeImg, box.x, box.y + 112);
+  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
+  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
+  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  image(classroomImg, box.x, box.y + 112);
+
+}
+
+function act3A() {
+  button.words = "Be A Savage", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Make Up Exscuse ", button2.textsize = 30, buttontext2.x = 1297;
+  if (buttonIsPressed) {
+    state = "act2A";
+    buttonIsPressed = false;
+  }
+
+  if (button2IsPressed) {
+    state = "act2B";
+    button2IsPressed = false;
+  }
+
+  textSize(50);
+  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  textSize(18);
+  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
+  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
+  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  image(classroomImg, box.x, box.y + 112);
+
+}
+
+function act3A() {
+  button.words = "Be A Savage", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Make Up Exscuse ", button2.textsize = 30, buttontext2.x = 1297;
+  if (buttonIsPressed) {
+    state = "act2A";
+    buttonIsPressed = false;
+  }
+
+  if (button2IsPressed) {
+    state = "act2B";
+    button2IsPressed = false;
+  }
+
+  textSize(50);
+  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  textSize(18);
+  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
+  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
+  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  image(classroomImg, box.x, box.y + 112);
+
+}
+
+function act3B() {
+  button.words = "Be A Savage", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Make Up Exscuse ", button2.textsize = 30, buttontext2.x = 1297;
+  if (buttonIsPressed) {
+    state = "act2A";
+    buttonIsPressed = false;
+  }
+
+  if (button2IsPressed) {
+    state = "act2B";
+    button2IsPressed = false;
+  }
+
+  textSize(50);
+  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  textSize(18);
+  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
+  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
+  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  image(classroomImg, box.x, box.y + 112);
 
 }
