@@ -281,7 +281,7 @@ function act2A() {
   }
 
   textSize(50);
-  text("Day 1, 10:15am", box.x + 15, box.y - 20);
+  text("Day 1, 10:30am", box.x + 15, box.y - 20);
   textSize(18);
   text("You frantically jump out of your bed, run downstairs and quickly have a bowl of cereal then on your way out you.", box.x + 15, box.y + 25);
   text("wonder whether you should quickly get to school on your bike or since you're already late, walk to school", box.x + 70, box.y + 50);
@@ -291,8 +291,8 @@ function act2A() {
 }
 
 function act2B() {
-  button.words = "Answer The Question", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Igore him", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Be a Savege", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Ignore him", button2.textsize = 30, buttontext2.x = 1297;
   if (buttonIsPressed) {
     state = "act2A";
     buttonIsPressed = false;
