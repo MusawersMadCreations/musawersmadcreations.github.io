@@ -7,7 +7,7 @@ let state;
 let inventory;
 let buttonIsPressed, button2IsPressed;
 let goodLuckImg, clockImg, homelessImg, ringImg, classroomImg, auctionImg, bullyImg, expelledImg, fastFoodImg,
-fireImg, hospitalImg, jailImg, kidsImg, lunchImg, moneyWinImg, poisonImg, subsWinImg, videogameImg, bradImg;
+  fireImg, hospitalImg, jailImg, kidsImg, lunchImg, moneyWinImg, poisonImg, subsWinImg, videogameImg, bradImg;
 let box = {
   x: 300,
   y: 75,
@@ -49,12 +49,12 @@ let buttontext2 = {
 
 function preload() {
   goodLuckImg = loadImage("images/goodluck.png"), clockImg = loadImage("images/clock.png"), homelessImg = loadImage("images/homeless.jpg"),
-  bikeImg = loadImage("images/bike.jpg"), ringImg = loadImage("images/ring.jpg"), classroomImg = loadImage("images/classroom.jpg"),
-  auctionImg  = loadImage("images/auction.jpg"), bullyImg  = loadImage("images/bully.jpg"), expelledImg  = loadImage("images/expelled.jpg"),
-  fastFoodImg  = loadImage("images/fast food.jpg"), fireImg = loadImage("images/fire.jpg"), hospitalImg  = loadImage("images/hospital.jpeg"),
-  jailImg  = loadImage("images/jail.jpg"), kidsImg  = loadImage("images/kids.jpeg"), lunchImg  = loadImage("images/lunch.jpg"),
-  moneyWinImg  = loadImage("images/money win.jpg"), poisonImg  = loadImage("images/poison.jpg"), subsWinImg  = loadImage("images/subs.jpg"),
-  videogameImg  = loadImage("images/video games.jpg"), bradImg  = loadImage("images/brad.jpg");
+    bikeImg = loadImage("images/bike.jpg"), ringImg = loadImage("images/ring.jpg"), classroomImg = loadImage("images/classroom.jpg"),
+    auctionImg = loadImage("images/auction.jpg"), bullyImg = loadImage("images/bully.jpg"), expelledImg = loadImage("images/expelled.jpg"),
+    fastFoodImg = loadImage("images/fast food.jpg"), fireImg = loadImage("images/fire.jpg"), hospitalImg = loadImage("images/hospital.jpeg"),
+    jailImg = loadImage("images/jail.jpg"), kidsImg = loadImage("images/kids.jpeg"), lunchImg = loadImage("images/lunch.jpg"),
+    moneyWinImg = loadImage("images/money win.jpg"), poisonImg = loadImage("images/poison.jpg"), subsWinImg = loadImage("images/subs.jpg"),
+    videogameImg = loadImage("images/video games.jpg"), bradImg = loadImage("images/brad.jpg");
 }
 
 function setup() {
@@ -141,8 +141,6 @@ function playstory() {
     background(255);
     makeTextBox();
     act3C();
-    makeButton();
-    makeButton2();
   } else if (state === "act3D") {
     background(255);
     makeTextBox();
@@ -159,20 +157,14 @@ function playstory() {
     background(255);
     makeTextBox();
     act4B();
-    makeButton();
-    makeButton2();
   } else if (state === "act4C") {
     background(255);
     makeTextBox();
     act4C();
-    makeButton();
-    makeButton2();
   } else if (state === "act4D") {
     background(255);
     makeTextBox();
     act4D();
-    makeButton();
-    makeButton2();
   } else if (state === "act4E") {
     background(255);
     makeTextBox();
@@ -183,8 +175,6 @@ function playstory() {
     background(255);
     makeTextBox();
     act4F();
-    makeButton();
-    makeButton2();
   } else if (state === "act5A") {
     background(255);
     makeTextBox();
@@ -193,12 +183,10 @@ function playstory() {
     background(255);
     makeTextBox();
     act5B();
-    makeButton();
   } else if (state === "act5C") {
     background(255);
     makeTextBox();
     act5C();
-    makeButton();
   } else if (state === "act5D") {
     background(255);
     makeTextBox();
@@ -246,7 +234,6 @@ function act1() {
 
 function act1A() {
   button.y = 600, button.words = "Game Over", button.textsize = 30, buttontext.x = 1297;
-  state = "gameOver";
   textSize(50);
   text("Day 7300", box.x + 15, box.y - 20);
   textSize(18);
@@ -373,7 +360,6 @@ function act3B() {
 }
 
 function act3C() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
 
   textSize(50);
   text("Day 1, 10:30am", box.x + 15, box.y - 20);
@@ -394,7 +380,7 @@ function act3D() {
   }
 
   if (button2IsPressed) {
-    state = "actF";
+    state = "act4F";
     button2IsPressed = false;
   }
 
@@ -409,8 +395,8 @@ function act3D() {
 }
 
 function act4A() {
-  button.words = "Go Out", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Stay At School ", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Go To Auction", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Go Home", button2.textsize = 30, buttontext2.x = 1297;
   if (buttonIsPressed) {
     state = "act5A";
     buttonIsPressed = false;
@@ -432,7 +418,6 @@ function act4A() {
 }
 
 function act4B() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
 
   textSize(50);
   text("Day 1, 10:30am", box.x + 15, box.y - 20);
@@ -445,7 +430,6 @@ function act4B() {
 }
 
 function act4C() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
 
   textSize(50);
   text("Day 1, 10:30am", box.x + 15, box.y - 20);
@@ -458,11 +442,6 @@ function act4C() {
 }
 
 function act4D() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  if (buttonIsPressed) {
-    state = "act5D";
-    buttonIsPressed = false;
-  }
 
   textSize(50);
   text("Day 1, 10:30am", box.x + 15, box.y - 20);
@@ -475,8 +454,8 @@ function act4D() {
 }
 
 function act4E() {
-  button.words = "Go Out", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Stay At School ", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Subway", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Mc Donalds", button2.textsize = 30, buttontext2.x = 1297;
   if (buttonIsPressed) {
     state = "act5C";
     buttonIsPressed = false;
@@ -498,7 +477,6 @@ function act4E() {
 }
 
 function act4F() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
 
   textSize(50);
   text("Day 1, 10:30am", box.x + 15, box.y - 20);
@@ -521,7 +499,6 @@ function act5A() {
 }
 
 function act5B() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
 
   textSize(50);
   text("Day 1, 10:30am", box.x + 15, box.y - 20);
