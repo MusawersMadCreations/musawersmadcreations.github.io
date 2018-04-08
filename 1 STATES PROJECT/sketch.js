@@ -223,7 +223,7 @@ function act1() {
   }
 
   textSize(50);
-  text("Day 1", box.x + 15, box.y - 20);
+  text("Day 1, 10:00am", box.x + 15, box.y - 20);
   textSize(18);
   text("YAAAAAWN, you wake up and glance at your alarm clock. OH SHIT your late for school what do you.", box.x + 15, box.y + 25);
   text("After rolling around in your bed for a while you realize you have to get up", box.x + 70, box.y + 50);
@@ -280,7 +280,7 @@ function act2A() {
   }
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 10:45am", box.x + 15, box.y - 20);
   textSize(16);
   text("You grab your Air Macs and causualy walk to school knowing you will be late anyway. On the way there you hear a loud horn and", box.x, box.y + 25);
   text("look behind you and see a rusty truck racing towards the side walk about to hit you. So you jump out of the way and land", box.x, box.y + 50);
@@ -304,7 +304,7 @@ function act2B() {
   }
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 10:35am", box.x + 15, box.y - 20);
   textSize(18);
   text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
   text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
@@ -327,11 +327,11 @@ function act3A() {
   }
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 11:07am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("When you get to school you realize lunch has already started so make your way to your locker. When you ", box.x + 15, box.y + 25);
+  text("get there you see two of your close friends at there own lockers. One of them being the obnoxious ", box.x + 70, box.y + 50);
+  text("Charlie and the other being the spoiled Bran. Who do you hang out with.", box.x + 350, box.y + 75);
   image(kidsImg, box.x, box.y + 112);
 
 }
@@ -350,11 +350,11 @@ function act3B() {
   }
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 11:05am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("When you get to school you you see that same rusty truck that almost ran you over along with the culprits.", box.x + 15, box.y + 25);
+  text("They look like there dealing something so it might be best to just walk away and ingnore them but a ", box.x + 70, box.y + 50);
+  text("part of you wants to confront them, what do you do.", box.x + 350, box.y + 75);
   image(bullyImg, box.x, box.y + 112);
 
 }
@@ -362,11 +362,11 @@ function act3B() {
 function act3C() {
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 10:40am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("You say to your teacher that someone told me to go to hell, I couldn't find it at first but now I'm here.", box.x + 15, box.y + 25);
+  text("Your teacher gives you the evil eye and tell you to take a trip to the principles office.", box.x + 70, box.y + 50);
+  text("When you get there you explain everything but he expelles you anyway.", box.x + 350, box.y + 75);
   image(expelledImg, box.x, box.y + 112);
 
 }
@@ -385,9 +385,9 @@ function act3D() {
   }
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 11:10am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
+  text("The teacher sighs, give you a late slip and continues his boooringg lecture. After class lunch starts and", box.x + 15, box.y + 25);
   text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
   text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
   image(lunchImg, box.x, box.y + 112);
