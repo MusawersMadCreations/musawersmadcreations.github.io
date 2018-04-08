@@ -388,8 +388,8 @@ function act3D() {
   text("Day 1, 11:10am", box.x + 15, box.y - 20);
   textSize(18);
   text("The teacher sighs, give you a late slip and continues his boooringg lecture. After class, lunch starts and ", box.x + 15, box.y + 25);
-  text("you  ", box.x + 70, box.y + 50);
-  text("", box.x + 350, box.y + 75);
+  text("you dont see any of your friends. You can either go walk to the near by fast food places or", box.x + 70, box.y + 50);
+  text("stay at school and mess around.", box.x + 350, box.y + 75);
   image(lunchImg, box.x, box.y + 112);
 
 }
@@ -408,11 +408,12 @@ function act4A() {
   }
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 11:30am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("You go out with brad and he treats you to some ice cream. While out with him you tell him about your crazy morning,", box.x + 15, box.y + 25);
+  text("about how you almost got run over and how you found this cool ring on the ground. You show him the", box.x + 70, box.y + 50);
+  text("ring and brad looked suprised, he tells you to bring it to his dads auction later tonight and.", box.x + 350, box.y + 75);
+  text("how it might be worth something. What to you do after school.", box.x + 350, box.y + 100);
   image(bradImg, box.x, box.y + 112);
 
 }
@@ -420,11 +421,12 @@ function act4A() {
 function act4B() {
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 05:10pm", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("Charlie somehow convices you to come rob this gas station with him. While there he pulls out a bb gun with the", box.x + 15, box.y + 25);
+  text("tip painted black and points it at the owner while you fill a bag with cash and some skittles. Five minutes", box.x + 70, box.y + 50);
+  text("later cops show and arrest you guys right when you are about to leave. And take you to a holding cell", box.x + 350, box.y + 75);
+  text("and take you to a holding cell where you await the trail", box.x + 350, box.y + 100);
   image(jailImg, box.x, box.y + 112);
 
 }
@@ -432,11 +434,11 @@ function act4B() {
 function act4C() {
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 1:30pm", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("You go up to the 2 knuckle heads and yell WTF, learn to drive. They come closer and start laughing at you then ", box.x + 15, box.y + 25);
+  text("suddenly he pushes you down and the other kid kicks you repeatly for a couple minutes until you black out.", box.x + 70, box.y + 50);
+  text("When you wake up your in the hospital and you feel terrible.", box.x + 350, box.y + 75);
   image(hospitalImg, box.x, box.y + 112);
 
 }
@@ -446,7 +448,7 @@ function act4D() {
   textSize(50);
   text("Day 1, 10:30am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
+  text("You choose to hold in your anger and walk by without saying anything. They still notice you and start ", box.x + 15, box.y + 25);
   text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
   text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
   image(hospitalImg, box.x, box.y + 112);
