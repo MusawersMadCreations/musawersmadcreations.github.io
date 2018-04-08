@@ -387,9 +387,9 @@ function act3D() {
   textSize(50);
   text("Day 1, 11:10am", box.x + 15, box.y - 20);
   textSize(18);
-  text("The teacher sighs, give you a late slip and continues his boooringg lecture. After class lunch starts and", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("The teacher sighs, give you a late slip and continues his boooringg lecture. After class, lunch starts and ", box.x + 15, box.y + 25);
+  text("you  ", box.x + 70, box.y + 50);
+  text("", box.x + 350, box.y + 75);
   image(lunchImg, box.x, box.y + 112);
 
 }
