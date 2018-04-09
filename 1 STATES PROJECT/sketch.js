@@ -7,7 +7,7 @@ let state;
 let inventory;
 let buttonIsPressed, button2IsPressed;
 let goodLuckImg, clockImg, homelessImg, ringImg, classroomImg, auctionImg, bullyImg, expelledImg, fastFoodImg,
-  fireImg, hospitalImg, jailImg, kidsImg, lunchImg, moneyWinImg, poisonImg, subsWinImg, videogameImg, bradImg;
+  fireImg, hospitalImg, jailImg, kidsImg, lunchImg, moneyWinImg, poisonImg, subsWinImg, videogameImg, bradImg, bikeImg;
 let box = {
   x: 300,
   y: 75,
@@ -49,12 +49,12 @@ let buttontext2 = {
 
 function preload() {
   goodLuckImg = loadImage("images/goodluck.png"), clockImg = loadImage("images/clock.png"), homelessImg = loadImage("images/homeless.jpg"),
-    bikeImg = loadImage("images/bike.jpg"), ringImg = loadImage("images/ring.jpg"), classroomImg = loadImage("images/classroom.jpg"),
-    auctionImg = loadImage("images/auction.jpg"), bullyImg = loadImage("images/bully.jpg"), expelledImg = loadImage("images/expelled.jpg"),
-    fastFoodImg = loadImage("images/fast food.jpg"), fireImg = loadImage("images/fire.jpg"), hospitalImg = loadImage("images/hospital.jpeg"),
-    jailImg = loadImage("images/jail.jpg"), kidsImg = loadImage("images/kids.jpeg"), lunchImg = loadImage("images/lunch.jpg"),
-    moneyWinImg = loadImage("images/money win.jpg"), poisonImg = loadImage("images/poison.jpg"), subsWinImg = loadImage("images/subs.jpg"),
-    videogameImg = loadImage("images/video games.jpg"), bradImg = loadImage("images/brad.jpg");
+  bikeImg = loadImage("images/bike.jpg"), ringImg = loadImage("images/ring.jpg"), classroomImg = loadImage("images/classroom.jpg"),
+  auctionImg = loadImage("images/auction.jpg"), bullyImg = loadImage("images/bully.jpg"), expelledImg = loadImage("images/expelled.jpg"),
+  fastFoodImg = loadImage("images/fast food.jpg"), fireImg = loadImage("images/fire.jpg"), hospitalImg = loadImage("images/hospital.jpeg"),
+  jailImg = loadImage("images/jail.jpg"), kidsImg = loadImage("images/kids.jpeg"), lunchImg = loadImage("images/lunch.jpg"),
+  moneyWinImg = loadImage("images/money win.jpg"), poisonImg = loadImage("images/poison.jpg"), subsWinImg = loadImage("images/subs.jpg"),
+  videogameImg = loadImage("images/video games.jpg"), bradImg = loadImage("images/brad.jpg");
 }
 
 function setup() {
@@ -230,8 +230,8 @@ function act1() {
   textSize(50);
   text("Day 1, 10:00am", box.x + 15, box.y - 20);
   textSize(18);
-  text("YAAAAAWN, you wake up and glance at your alarm clock. OH SHIT you're late for school what do you do.", box.x + 20, box.y + 25);
-  text("After rolling around in your bed for a while you realize you have to get up.", box.x + 115, box.y + 50);
+  text("YAAAAAWN, you wake up and glance at your alarm clock. OH SHIT you're late for school what are you", box.x + 18, box.y + 25);
+  text("doing. After rolling around in your bed for a while you realize you have to get up.", box.x + 113, box.y + 50);
   text("What Do You Do?", box.x + 350, box.y + 75);
   image(clockImg, box.x, box.y + 112);
 
@@ -249,8 +249,8 @@ function act1A() {
 }
 
 function act1B() {
-  button.words = "walk", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "bike", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Walk", button.textsize = 45, buttontext.x = 1330, box.width = 925;
+  button2.words = "Bike", button2.textsize = 45, buttontext2.x = 1330;
   if (buttonIsPressed) {
     state = "act2A";
     buttonIsPressed = false;
@@ -272,8 +272,8 @@ function act1B() {
 }
 
 function act2A() {
-  button.words = "Take The Ring", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Leave It", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Take The Ring", button.textsize = 30, buttontext.x = 1280, box.width = 925;
+  button2.words = "Leave It", button2.textsize = 30, buttontext2.x = 1320;
   if (buttonIsPressed) {
     state = "act3A";
     buttonIsPressed = false;
@@ -290,7 +290,7 @@ function act2A() {
   text("You grab your Air Max and casually walk to school knowing you will be late anyway. On the way there you hear a loud horn", box.x + 20, box.y + 25);
   text("and look behind you and see a rusty truck racing towards the side walk about to hit you. So you jump out of the way and land", box.x + 20, box.y + 50);
   text("on a large pile of dirt. Right after you jump the car sweeerrvess back onto the street and you hear laughter from inside.", box.x + 50, box.y + 75);
-  text("You wipe all the dirt from your clothes and noticed a shiny metal ring on the ground. Do you take it", box.x + 100, box.y + 100)
+  text("You wipe all the dirt from your clothes and noticed a shiny metal ring on the ground. Do you take it", box.x + 100, box.y + 100);
   image(ringImg, box.x, box.y + 112);
 
 }
@@ -552,6 +552,7 @@ function act5D() {
   text("the doctor says you were heavly food poisoned.", box.x + 350, box.y + 100);
   image(poisonImg, box.x, box.y + 112);
 }
+
 function act6A() {
 
   textSize(50);
