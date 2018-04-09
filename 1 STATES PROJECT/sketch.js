@@ -91,6 +91,18 @@ function makeButton2() {
   text(button2.words, buttontext2.x, buttontext2.y);
 }
 
+function youWin(){
+  textSize(150);
+  text("YOU", box.x + 950, box.y + 225);
+  text("WIN", box.x + 975, box.y + 400);
+}
+
+function youLose(){
+  textSize(125);
+  text("YOU", box.x + 950, box.y + 225);
+  text("LOSE", box.x + 930, box.y + 400);
+}
+
 function playstory() {
   if (state === "startScreen") {
     makeTextBox();
@@ -106,6 +118,7 @@ function playstory() {
     background(255);
     makeTextBox();
     act1A();
+    youLose();
   } else if (state === "act1B") {
     background(255);
     makeTextBox();
@@ -140,6 +153,7 @@ function playstory() {
     background(255);
     makeTextBox();
     act3C();
+    youLose();
   } else if (state === "act3D") {
     background(255);
     makeTextBox();
@@ -156,14 +170,17 @@ function playstory() {
     background(255);
     makeTextBox();
     act4B();
+    youLose();
   } else if (state === "act4C") {
     background(255);
     makeTextBox();
     act4C();
+    youLose();
   } else if (state === "act4D") {
     background(255);
     makeTextBox();
     act4D();
+    youLose();
   } else if (state === "act4E") {
     background(255);
     makeTextBox();
@@ -174,6 +191,7 @@ function playstory() {
     background(255);
     makeTextBox();
     act4F();
+    youLose();
   } else if (state === "act5A") {
     background(255);
     makeTextBox();
@@ -184,18 +202,22 @@ function playstory() {
     background(255);
     makeTextBox();
     act5B();
+    youLose();
   } else if (state === "act5C") {
     background(255);
     makeTextBox();
     act5C();
+    youWin();
   } else if (state === "act5D") {
     background(255);
     makeTextBox();
     act5D();
+    youLose();
   } else if (state === "act6A") {
     background(255);
     makeTextBox();
     act6A();
+    youWin();
   }
 }
 
@@ -238,7 +260,6 @@ function act1() {
 }
 
 function act1A() {
-
   textSize(50);
   text("Day 7300, 6:00pm", box.x + 15, box.y - 20);
   textSize(18);
@@ -294,10 +315,9 @@ function act2A() {
   image(ringImg, box.x, box.y + 112);
 
 }
-
 function act2B() {
-  button.words = "Be A Savage", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Make Up Exscuse ", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Be A Savage", button.textsize = 30, buttontext.x = 1290, box.width = 925;
+  button2.words = "Make Up Exscuse ", button2.textsize = 30, buttontext2.x = 1255;
   if (buttonIsPressed) {
     state = "act3C";
     buttonIsPressed = false;
@@ -319,8 +339,8 @@ function act2B() {
 }
 
 function act3A() {
-  button.words = "Brad", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Charlie", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Brad", button.textsize = 45, buttontext.x = 1330, box.width = 925;
+  button2.words = "Charlie", button2.textsize = 45, buttontext2.x = 1305;
   if (buttonIsPressed) {
     state = "act4A";
     buttonIsPressed = false;
@@ -365,7 +385,6 @@ function act3B() {
 }
 
 function act3C() {
-
   textSize(50);
   text("Day 1, 10:40am", box.x + 15, box.y - 20);
   textSize(18);
@@ -424,7 +443,6 @@ function act4A() {
 }
 
 function act4B() {
-
   textSize(50);
   text("Day 1, 5:10pm", box.x + 15, box.y - 20);
   textSize(16);
@@ -437,7 +455,6 @@ function act4B() {
 }
 
 function act4C() {
-
   textSize(50);
   text("Day 1, 1:30pm", box.x + 15, box.y - 20);
   textSize(18);
@@ -449,7 +466,6 @@ function act4C() {
 }
 
 function act4D() {
-
   textSize(50);
   text("Day 1, 1:30am", box.x + 15, box.y - 20);
   textSize(18);
@@ -485,7 +501,6 @@ function act4E() {
 }
 
 function act4F() {
-
   textSize(50);
   text("Day 1, 10:30am", box.x + 15, box.y - 20);
   textSize(18);
@@ -520,7 +535,6 @@ function act5A() {
 }
 
 function act5B() {
-
   textSize(50);
   text("Day 2, 4:30am", box.x + 15, box.y - 20);
   textSize(18);
@@ -531,7 +545,6 @@ function act5B() {
 }
 
 function act5C() {
-
   textSize(50);
   text("FOOD WIN", box.x + 15, box.y - 20);
   textSize(18);
@@ -542,7 +555,6 @@ function act5C() {
 }
 
 function act5D() {
-
   textSize(50);
   text("Day 1, 12:00am", box.x + 15, box.y - 20);
   textSize(18);
@@ -554,7 +566,6 @@ function act5D() {
 }
 
 function act6A() {
-
   textSize(50);
   text("MONEY ENDING", box.x + 15, box.y - 20);
   textSize(18);
