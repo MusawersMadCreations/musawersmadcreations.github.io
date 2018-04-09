@@ -2,19 +2,18 @@
 // Musawer
 // March 6, 2018
 
-// let boxAnimation;
 let state;
 let inventory;
+// let boxAnimation;
+let goodLuckImg, clockImg, homelessImg, ringImg, classroomImg;
 let buttonIsPressed, button2IsPressed;
-let goodLuckImg, clockImg, homelessImg, ringImg, classroomImg, auctionImg, bullyImg, expelledImg, fastFoodImg,
-fireImg, hospitalImg, jailImg, kidsImg, lunchImg, moneyWinImg, poisonImg, subsWinImg, videogameImg, bradImg;
 let box = {
   x: 300,
   y: 75,
   width: 1000,
   height: 125,
-};
 
+};
 let button = {
   x: 1250,
   y: 600,
@@ -48,20 +47,15 @@ let buttontext2 = {
 };
 
 function preload() {
-  goodLuckImg = loadImage("images/goodluck.png"), clockImg = loadImage("images/clock.png"), homelessImg = loadImage("images/homeless.jpg"),
-  bikeImg = loadImage("images/bike.jpg"), ringImg = loadImage("images/ring.jpg"), classroomImg = loadImage("images/classroom.jpg"),
-  auctionImg  = loadImage("images/auction.jpg"), bullyImg  = loadImage("images/bully.jpg"), expelledImg  = loadImage("images/expelled.jpg"),
-  fastFoodImg  = loadImage("images/fast food.jpg"), fireImg = loadImage("images/fire.jpg"), hospitalImg  = loadImage("images/hospital.jpeg"),
-  jailImg  = loadImage("images/jail.jpg"), kidsImg  = loadImage("images/kids.jpeg"), lunchImg  = loadImage("images/lunch.jpg"),
-  moneyWinImg  = loadImage("images/money win.jpg"), poisonImg  = loadImage("images/poison.jpg"), subsWinImg  = loadImage("images/subs.jpg"),
-  videogameImg  = loadImage("images/video games.jpg"), bradImg  = loadImage("images/brad.jpg");
+  goodLuckImg = loadImage("images/goodluck.png"), clockImg = loadImage("images/clock.png"), homelessImg = loadImage("images/homeless.jpg");;
+  bikeImg = loadImage("images/bike.jpg"), ringImg = loadImage("images/ring.jpg"),classroomImg = loadImage("images/classroom.jpg");
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(255);
   state = "startScreen";
-  // inventory = [];
+  inventory = [];
   // boxAnimation = rect(button.x - 10, button.y - 10, 275, 90);
 }
 
@@ -140,69 +134,63 @@ function playstory() {
   } else if (state === "act3C") {
     background(255);
     makeTextBox();
-    act3C();
+    act4A();
     makeButton();
     makeButton2();
   } else if (state === "act3D") {
     background(255);
     makeTextBox();
-    act3D();
+    act4B();
     makeButton();
     makeButton2();
   } else if (state === "act4A") {
     background(255);
     makeTextBox();
-    act4A();
+    act5A();
     makeButton();
     makeButton2();
   } else if (state === "act4B") {
     background(255);
     makeTextBox();
-    act4B();
+    act5B();
     makeButton();
     makeButton2();
   } else if (state === "act4C") {
     background(255);
     makeTextBox();
-    act4C();
+    act6A();
     makeButton();
     makeButton2();
   } else if (state === "act4D") {
     background(255);
     makeTextBox();
-    act4D();
-    makeButton();
-    makeButton2();
-  } else if (state === "act4E") {
-    background(255);
-    makeTextBox();
-    act4E();
-    makeButton();
-    makeButton2();
-  } else if (state === "act4F") {
-    background(255);
-    makeTextBox();
-    act4F();
+    act6B();
     makeButton();
     makeButton2();
   } else if (state === "act5A") {
     background(255);
     makeTextBox();
-    act5A();
+    act7A();
+    makeButton();
+    makeButton2();
   } else if (state === "act5B") {
     background(255);
     makeTextBox();
-    act5B();
+    act7B();
     makeButton();
+    makeButton2();
   } else if (state === "act5C") {
     background(255);
     makeTextBox();
-    act5C();
+    act8A();
     makeButton();
+    makeButton2();
   } else if (state === "act5D") {
     background(255);
     makeTextBox();
-    act5D();
+    act8B();
+    makeButton();
+    makeButton2();
   }
 }
 
@@ -283,12 +271,12 @@ function act2A() {
   button.words = "Take Ring", button.textsize = 30, buttontext.x = 1297, box.width = 925;
   button2.words = "Leave It", button2.textsize = 30, buttontext2.x = 1297;
   if (buttonIsPressed) {
-    state = "act3A";
+    state = "act2A";
     buttonIsPressed = false;
   }
 
   if (button2IsPressed) {
-    state = "act3B";
+    state = "act2B";
     button2IsPressed = false;
   }
 
@@ -307,12 +295,12 @@ function act2B() {
   button.words = "Be A Savage", button.textsize = 30, buttontext.x = 1297, box.width = 925;
   button2.words = "Make Up Exscuse ", button2.textsize = 30, buttontext2.x = 1297;
   if (buttonIsPressed) {
-    state = "act3C";
+    state = "act2A";
     buttonIsPressed = false;
   }
 
   if (button2IsPressed) {
-    state = "act3D";
+    state = "act2B";
     button2IsPressed = false;
   }
 
@@ -327,15 +315,15 @@ function act2B() {
 }
 
 function act3A() {
-  button.words = "Brad", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Charlie", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Be A Savage", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Make Up Exscuse ", button2.textsize = 30, buttontext2.x = 1297;
   if (buttonIsPressed) {
-    state = "act4A";
+    state = "act2A";
     buttonIsPressed = false;
   }
 
   if (button2IsPressed) {
-    state = "act4B";
+    state = "act2B";
     button2IsPressed = false;
   }
 
@@ -345,20 +333,43 @@ function act3A() {
   text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
   text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
   text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(kidsImg, box.x, box.y + 112);
+  image(classroomImg, box.x, box.y + 112);
+
+}
+
+function act3A() {
+  button.words = "Be A Savage", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Make Up Exscuse ", button2.textsize = 30, buttontext2.x = 1297;
+  if (buttonIsPressed) {
+    state = "act2A";
+    buttonIsPressed = false;
+  }
+
+  if (button2IsPressed) {
+    state = "act2B";
+    button2IsPressed = false;
+  }
+
+  textSize(50);
+  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  textSize(18);
+  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
+  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
+  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  image(classroomImg, box.x, box.y + 112);
 
 }
 
 function act3B() {
-  button.words = "FIGHT Bully", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Ignore Him ", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Be A Savage", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "Make Up Exscuse ", button2.textsize = 30, buttontext2.x = 1297;
   if (buttonIsPressed) {
-    state = "act4C";
+    state = "act2A";
     buttonIsPressed = false;
   }
 
   if (button2IsPressed) {
-    state = "act4D";
+    state = "act2B";
     button2IsPressed = false;
   }
 
@@ -367,189 +378,7 @@ function act3B() {
   textSize(18);
   text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
   text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(bullyImg, box.x, box.y + 112);
+  text(" around with a maniacal grin and asks why you are late..", box.x + 350, box.y + 75);
+  image(classroomImg, box.x, box.y + 112);
 
-}
-
-function act3C() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(expelledImg, box.x, box.y + 112);
-
-}
-
-function act3D() {
-  button.words = "Go Out", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Stay At School ", button2.textsize = 30, buttontext2.x = 1297;
-  if (buttonIsPressed) {
-    state = "act4E";
-    buttonIsPressed = false;
-  }
-
-  if (button2IsPressed) {
-    state = "actF";
-    button2IsPressed = false;
-  }
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(lunchImg, box.x, box.y + 112);
-
-}
-
-function act4A() {
-  button.words = "Go Out", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Stay At School ", button2.textsize = 30, buttontext2.x = 1297;
-  if (buttonIsPressed) {
-    state = "act5A";
-    buttonIsPressed = false;
-  }
-
-  if (button2IsPressed) {
-    state = "act5B";
-    button2IsPressed = false;
-  }
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(bradImg, box.x, box.y + 112);
-
-}
-
-function act4B() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(jailImg, box.x, box.y + 112);
-
-}
-
-function act4C() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(hospitalImg, box.x, box.y + 112);
-
-}
-
-function act4D() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  if (buttonIsPressed) {
-    state = "act5D";
-    buttonIsPressed = false;
-  }
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(hospitalImg, box.x, box.y + 112);
-
-}
-
-function act4E() {
-  button.words = "Go Out", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Stay At School ", button2.textsize = 30, buttontext2.x = 1297;
-  if (buttonIsPressed) {
-    state = "act5C";
-    buttonIsPressed = false;
-  }
-
-  if (button2IsPressed) {
-    state = "act5D";
-    button2IsPressed = false;
-  }
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(fastFoodImg, box.x, box.y + 112);
-
-}
-
-function act4F() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(fireImg, box.x, box.y + 112);
-}
-
-function act5A() {
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(moneyWinImg, box.x, box.y + 112);
-}
-
-function act5B() {
-  button.words = "Game Over", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(videogameImg, box.x, box.y + 112);
-}
-
-function act5C() {
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(subsWinImg, box.x, box.y + 112);
-}
-
-function act5D() {
-
-  textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
-  textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(poisonImg, box.x, box.y + 112);
 }
