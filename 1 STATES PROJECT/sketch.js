@@ -91,6 +91,10 @@ function makeButton2() {
   text(button2.words, buttontext2.x, buttontext2.y);
 }
 
+function youWin(){
+  text(YOU,x,y,[x2],[y2])
+}
+
 function playstory() {
   if (state === "startScreen") {
     makeTextBox();
