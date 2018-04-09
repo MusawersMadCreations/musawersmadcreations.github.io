@@ -179,6 +179,8 @@ function playstory() {
     background(255);
     makeTextBox();
     act5A();
+    makeButton();
+    makeButton2();
   } else if (state === "act5B") {
     background(255);
     makeTextBox();
@@ -194,7 +196,8 @@ function playstory() {
   } else if (state === "act6A") {
     background(255);
     makeTextBox();
-    act5D();
+    act6A();
+  }
 }
 
 function titleScreen() {
