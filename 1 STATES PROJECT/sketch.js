@@ -106,7 +106,6 @@ function playstory() {
     background(255);
     makeTextBox();
     act1A();
-    makeButton();
   } else if (state === "act1B") {
     background(255);
     makeTextBox();
@@ -210,8 +209,8 @@ function titleScreen() {
   textSize(50);
   text("Welcome to the game of choices", box.x + 130, box.y - 20);
   textSize(18);
-  text("Here you will be put on the spot with several decision that will have severe consequences as you continue with the game.", box.x + 15, box.y + 25);
-  text("Some decision will lead to a life of money and glory, others to your demise. So choose carfully or risk it all.", box.x + 70, box.y + 50);
+  text("Here, you will be put on the spot with several decision that will have severe consequences as you continue with the game.", box.x + 15, box.y + 25);
+  text("Some decisions will lead to a life of money and glory, others to your demise. So choose carfully or risk it all.", box.x + 70, box.y + 50);
   text("Click the start button to continue.", box.x + 350, box.y + 75);
 }
 
@@ -231,21 +230,21 @@ function act1() {
   textSize(50);
   text("Day 1, 10:00am", box.x + 15, box.y - 20);
   textSize(18);
-  text("YAAAAAWN, you wake up and glance at your alarm clock. OH SHIT your late for school what do you.", box.x + 15, box.y + 25);
-  text("After rolling around in your bed for a while you realize you have to get up", box.x + 70, box.y + 50);
-  text("What Will You Do", box.x + 350, box.y + 75);
+  text("YAAAAAWN, you wake up and glance at your alarm clock. OH SHIT you're late for school what do you do.", box.x + 20, box.y + 25);
+  text("After rolling around in your bed for a while you realize you have to get up.", box.x + 115, box.y + 50);
+  text("What Do You Do?", box.x + 350, box.y + 75);
   image(clockImg, box.x, box.y + 112);
 
 }
 
 function act1A() {
-  button.y = 600, button.words = "Game Over", button.textsize = 30, buttontext.x = 1297;
+
   textSize(50);
-  text("Day 7300", box.x + 15, box.y - 20);
+  text("Day 7300, 6:00pm", box.x + 15, box.y - 20);
   textSize(18);
-  text("You started skipping school from that day on and ended up failing high school. As a result your lovely parents kicked", box.x + 35, box.y + 25);
-  text("you out and you have been living on the streets from then on.", box.x + 250, box.y + 50);
-  text("Better luck next time.", box.x + 400, box.y + 75);
+  text("You started skipping school from that day on and ended up failing high school. As a result your lovely", box.x + 20, box.y + 25);
+  text("parents kicked you out and you have been living on the streets from then on.", box.x + 120, box.y + 50);
+  text("Better luck next time.", box.x + 335, box.y + 75);
   image(homelessImg, box.x, box.y + 112);
 }
 
@@ -265,15 +264,15 @@ function act1B() {
   textSize(50);
   text("Day 1, 10:15am", box.x + 15, box.y - 20);
   textSize(18);
-  text("You frantically jump out of your bed, run downstairs and quickly have a bowl of cereal then on your way out you.", box.x + 15, box.y + 25);
-  text("wonder whether you should quickly get to school on your bike or since you're already late, walk to school", box.x + 70, box.y + 50);
-  text("you could take your time and walk to school", box.x + 350, box.y + 75);
+  text("You frantically jump out of your bed, run downstairs and quickly have a bowl of cereal then on your way out. You", box.x + 15, box.y + 25);
+  text("wonder whether you should quickly get to school on your bike or since you're already late,", box.x + 100, box.y + 50);
+  text("you could take your time and walk to school.", box.x + 295, box.y + 75);
   image(bikeImg, box.x, box.y + 112);
 
 }
 
 function act2A() {
-  button.words = "Take Ring", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button.words = "Take The Ring", button.textsize = 30, buttontext.x = 1297, box.width = 925;
   button2.words = "Leave It", button2.textsize = 30, buttontext2.x = 1297;
   if (buttonIsPressed) {
     state = "act3A";
@@ -288,10 +287,10 @@ function act2A() {
   textSize(50);
   text("Day 1, 10:45am", box.x + 15, box.y - 20);
   textSize(16);
-  text("You grab your Air Macs and causualy walk to school knowing you will be late anyway. On the way there you hear a loud horn and", box.x, box.y + 25);
-  text("look behind you and see a rusty truck racing towards the side walk about to hit you. So you jump out of the way and land", box.x, box.y + 50);
-  text("on a large pile of dirt. Right after you jump the car swooooves back onto the street and you hear laughter from inside.", box.x, box.y + 75);
-  text("You wipe all the dirt from your clothes and noticed a shiny metal ring on the ground. Do you take it", box.x, box.y + 100)
+  text("You grab your Air Max and casually walk to school knowing you will be late anyway. On the way there you hear a loud horn", box.x + 20, box.y + 25);
+  text("and look behind you and see a rusty truck racing towards the side walk about to hit you. So you jump out of the way and land", box.x + 20, box.y + 50);
+  text("on a large pile of dirt. Right after you jump the car sweeerrvess back onto the street and you hear laughter from inside.", box.x + 50, box.y + 75);
+  text("You wipe all the dirt from your clothes and noticed a shiny metal ring on the ground. Do you take it", box.x + 100, box.y + 100)
   image(ringImg, box.x, box.y + 112);
 
 }
@@ -312,9 +311,9 @@ function act2B() {
   textSize(50);
   text("Day 1, 10:35am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a", box.x + 35, box.y + 25);
+  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 35, box.y + 50);
+  text("around with a maniacal grin and asks why you are late.", box.x + 235, box.y + 75);
   image(classroomImg, box.x, box.y + 112);
 
 }
@@ -335,9 +334,9 @@ function act3A() {
   textSize(50);
   text("Day 1, 11:07am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize lunch has already started so make your way to your locker. When you ", box.x + 15, box.y + 25);
-  text("get there you see two of your close friends at there own lockers. One of them being the obnoxious ", box.x + 70, box.y + 50);
-  text("Charlie and the other being the spoiled Bran. Who do you hang out with.", box.x + 350, box.y + 75);
+  text("When you get to school you realize lunch has already started so make your way to your locker. When you get ", box.x + 25, box.y + 25);
+  text("there you see two of your close friends at there own lockers. One of them being the obnoxious ", box.x + 80, box.y + 50);
+  text("Charlie and the other being the spoiled Bran. Who do you hang out with.", box.x + 175, box.y + 75);
   image(kidsImg, box.x, box.y + 112);
 
 }
@@ -358,9 +357,9 @@ function act3B() {
   textSize(50);
   text("Day 1, 11:05am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you you see that same rusty truck that almost ran you over along with the culprits.", box.x + 15, box.y + 25);
-  text("They look like there dealing something so it might be best to just walk away and ingnore them but a ", box.x + 70, box.y + 50);
-  text("part of you wants to confront them, what do you do.", box.x + 350, box.y + 75);
+  text("When you get to school you you see that same rusty truck that almost ran you over along with the culprits.", box.x + 40, box.y + 25);
+  text("They look like there dealing something so it might be best to just walk away and ingnore them but a ", box.x + 67, box.y + 50);
+  text("part of you wants to confront them, what do you do?", box.x + 275, box.y + 75);
   image(bullyImg, box.x, box.y + 112);
 
 }
@@ -370,9 +369,9 @@ function act3C() {
   textSize(50);
   text("Day 1, 10:40am", box.x + 15, box.y - 20);
   textSize(18);
-  text("You say to your teacher that someone told me to go to hell, I couldn't find it at first but now I'm here.", box.x + 15, box.y + 25);
-  text("Your teacher gives you the evil eye and tell you to take a trip to the principles office.", box.x + 70, box.y + 50);
-  text("When you get there you explain everything but he expelles you anyway.", box.x + 350, box.y + 75);
+  text("You say to your teacher that someone told me to go to hell, I couldn't find it at first but now I'm here.", box.x + 60, box.y + 25);
+  text("Your teacher gives you the evil eye and tell you to take a trip to the principles office.", box.x + 120, box.y + 50);
+  text("When you get there you explain everything but he expels you anyway.", box.x + 165, box.y + 75);
   image(expelledImg, box.x, box.y + 112);
 
 }
@@ -393,9 +392,9 @@ function act3D() {
   textSize(50);
   text("Day 1, 11:10am", box.x + 15, box.y - 20);
   textSize(18);
-  text("The teacher sighs, give you a late slip and continues his boooringg lecture. After class, lunch starts and ", box.x + 15, box.y + 25);
-  text("you dont see any of your friends. You can either go walk to the near by fast food places or", box.x + 70, box.y + 50);
-  text("stay at school and mess around.", box.x + 350, box.y + 75);
+  text("The teacher sighs, gives you a late slip and continues his boooringg lecture. After class, lunch starts and ", box.x + 55, box.y + 25);
+  text("you dont see any of your friends. You can either go walk to the near by fast food places or", box.x + 110, box.y + 50);
+  text("stay at school and mess around.", box.x + 325, box.y + 75);
   image(lunchImg, box.x, box.y + 112);
 
 }
@@ -416,10 +415,10 @@ function act4A() {
   textSize(50);
   text("Day 1, 11:30am", box.x + 15, box.y - 20);
   textSize(18);
-  text("You go out with brad and he treats you to some ice cream. While out with him you tell him about your crazy morning,", box.x + 15, box.y + 25);
-  text("about how you almost got run over and how you found this cool ring on the ground. You show him the", box.x + 70, box.y + 50);
-  text("ring and brad looked suprised, he tells you to bring it to his dads auction later tonight and.", box.x + 350, box.y + 75);
-  text("how it might be worth something. What to you do after school.", box.x + 350, box.y + 100);
+  text("You go out with Brad and he treats you to some ice cream. While out with him you tell him about your crazy", box.x + 35, box.y + 25);
+  text("morning, about how you almost got run over and how you found this cool ring on the ground. You show him the", box.x + 25, box.y + 50);
+  text("ring and brad looked suprised, he tells you to bring it to his dads auction later tonight and.", box.x + 125, box.y + 75);
+  text("how it might be worth something. What to you do after school?", box.x + 225, box.y + 100);
   image(bradImg, box.x, box.y + 112);
 
 }
@@ -428,11 +427,11 @@ function act4B() {
 
   textSize(50);
   text("Day 1, 5:10pm", box.x + 15, box.y - 20);
-  textSize(18);
-  text("Charlie somehow convices you to come rob this gas station with him. While there he pulls out a bb gun with the", box.x + 15, box.y + 25);
-  text("tip painted black and points it at the owner while you fill a bag with cash and some skittles. Five minutes", box.x + 70, box.y + 50);
-  text("later cops show and arrest you guys right when you are about to leave. And take you to a holding cell", box.x + 350, box.y + 75);
-  text("and take you to a holding cell where you await the trail", box.x + 350, box.y + 100);
+  textSize(16);
+  text("Charlie somehow convices you to come rob this gas station with him. While there he pulls out a bb gun with the", box.x + 45, box.y + 25);
+  text("tip painted black and points it at the owner while you fill a bag with cash and some skittles. Five minutes", box.x + 55, box.y + 50);
+  text("later cops show and arrest you guys right when you are about to leave. And take you to a holding cell", box.x + 35, box.y + 75);
+  text("and take you to a holding cell where you await the trail", box.x + 220, box.y + 100);
   image(jailImg, box.x, box.y + 112);
 
 }
@@ -456,7 +455,7 @@ function act4D() {
   textSize(18);
   text("You choose to hold in your anger and walk by without saying anything. They still notice you and start coming ", box.x + 15, box.y + 25);
   text("closer. Then they start calling you a crybaby and one of them pushes you down, you stick out your foot and   ", box.x + 70, box.y + 50);
-  text("trip him but another guy kicks you repeatedly until you black out. When you wake up your ", box.x + 350, box.y + 75);
+  text("trip him but another guy kicks you repeatedly until you black out. When you wake up you're ", box.x + 350, box.y + 75);
   text("in the hospital and everthing hurts.", box.x + 350, box.y + 100);
   image(hospitalImg, box.x, box.y + 112);
 
@@ -478,9 +477,9 @@ function act4E() {
   textSize(50);
   text("Day 1, 11:45am", box.x + 15, box.y - 20);
   textSize(18);
-  text("You start waking towards the plaza of food stores and you see a Subway right beside a Mc Donalds.", box.x + 15, box.y + 25);
-  text("Since you dont have too much money these are your only options, do you stay kinda healty and ", box.x + 70, box.y + 50);
-  text("eat at Subway or treat your self to Mc Donalds.", box.x + 350, box.y + 75);
+  text("You start walking towards the plaza of food stores and you see a Subway right beside a McDonalds.", box.x + 15, box.y + 25);
+  text("Since you dont have too much money these are your only options, do you stay kinda healthy and ", box.x + 70, box.y + 50);
+  text("eat at Subway or treat your self to McDonalds.", box.x + 350, box.y + 75);
   image(fastFoodImg, box.x, box.y + 112);
 
 }
@@ -527,7 +526,7 @@ function act5B() {
   textSize(18);
   text("You missed out on a golden opportunity and went home to play video games all night. While playing on your ", box.x + 15, box.y + 25);
   text("xbox360 you were sniping some kids in Call Of Duty, when suppenly the game crashes and you see a red", box.x + 70, box.y + 50);
-  text("ring around the xbox360 logo. You were then force to play on your Wii U what a tradegy.", box.x + 350, box.y + 75);
+  text("ring around the xbox360 logo. You were then force to play on your Wii U what a tragedy.", box.x + 350, box.y + 75);
   image(videogameImg, box.x, box.y + 112);
 }
 
@@ -556,7 +555,7 @@ function act5D() {
 function act6A() {
 
   textSize(50);
-  text("MONEY ENING", box.x + 15, box.y - 20);
+  text("MONEY ENDING", box.x + 15, box.y - 20);
   textSize(18);
   text("Brads dad starts the bid for the Roman ring and immediately a man in a black tux bids 1 million dollars. ", box.x + 15, box.y + 25);
   text("Everyones mouths drop but then right after a man in a white tux bids 2.5 million. The two continue", box.x + 70, box.y + 50);
