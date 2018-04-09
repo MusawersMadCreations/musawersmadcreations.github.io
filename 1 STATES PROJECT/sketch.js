@@ -191,7 +191,10 @@ function playstory() {
     background(255);
     makeTextBox();
     act5D();
-  }
+  } else if (state === "act6A") {
+    background(255);
+    makeTextBox();
+    act5D();
 }
 
 function titleScreen() {
@@ -421,7 +424,7 @@ function act4A() {
 function act4B() {
 
   textSize(50);
-  text("Day 1, 05:10pm", box.x + 15, box.y - 20);
+  text("Day 1, 5:10pm", box.x + 15, box.y - 20);
   textSize(18);
   text("Charlie somehow convices you to come rob this gas station with him. While there he pulls out a bb gun with the", box.x + 15, box.y + 25);
   text("tip painted black and points it at the owner while you fill a bag with cash and some skittles. Five minutes", box.x + 70, box.y + 50);
@@ -446,11 +449,12 @@ function act4C() {
 function act4D() {
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 1:30am", box.x + 15, box.y - 20);
   textSize(18);
-  text("You choose to hold in your anger and walk by without saying anything. They still notice you and start ", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("You choose to hold in your anger and walk by without saying anything. They still notice you and start coming ", box.x + 15, box.y + 25);
+  text("closer. Then they start calling you a crybaby and one of them pushes you down, you stick out your foot and   ", box.x + 70, box.y + 50);
+  text("trip him but another guy kicks you repeatedly until you black out. When you wake up your ", box.x + 350, box.y + 75);
+  text("in the hospital and everthing hurts.", box.x + 350, box.y + 100);
   image(hospitalImg, box.x, box.y + 112);
 
 }
@@ -469,11 +473,11 @@ function act4E() {
   }
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 11:45am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("You start waking towards the plaza of food stores and you see a Subway right beside a Mc Donalds.", box.x + 15, box.y + 25);
+  text("Since you dont have too much money these are your only options, do you stay kinda healty and ", box.x + 70, box.y + 50);
+  text("eat at Subway or treat your self to Mc Donalds.", box.x + 350, box.y + 75);
   image(fastFoodImg, box.x, box.y + 112);
 
 }
@@ -483,52 +487,77 @@ function act4F() {
   textSize(50);
   text("Day 1, 10:30am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("You choose save some money and not eat lunch, insted you go to the washroom and enter a stall to take a dump.", box.x + 15, box.y + 25);
+  text("While in there you have your headphones in and your jamming not aware that the fire alarm was pulled.", box.x + 70, box.y + 50);
+  text("Eventualy you start to smell smoke and get out of the stall only to see a blaze of fire all around.", box.x + 350, box.y + 75);
+  text("you but it was to late. You were burnt to a crisp.", box.x + 350, box.y + 100);
   image(fireImg, box.x, box.y + 112);
 }
 
 function act5A() {
+  button.words = "Sell it", button.textsize = 30, buttontext.x = 1297, box.width = 925;
+  button2.words = "... Dont be stupid", button2.textsize = 30, buttontext2.x = 1297;
+  if (buttonIsPressed) {
+    state = "act6A";
+    buttonIsPressed = false;
+  }
+
+  if (button2IsPressed) {
+    state = "act5A";
+    button2IsPressed = false;
+  }
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 7:30pm", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
-  image(moneyWinImg, box.x, box.y + 112);
+  text("Brad picks you up at your place and takes you to his dads auction. When you get there you guys go show brads dad  ", box.x + 15, box.y + 25);
+  text("the ring. He studies it for a good 5 minutes then shockingly tell you that this was a ring from 2000 years ago", box.x + 70, box.y + 50);
+  text("from the time of Jusius Ceaser. He then says that it is worth a fortune and you should highly consider.", box.x + 350, box.y + 75);
+  text("selling. What will you do?", box.x + 350, box.y + 100);
+  image(auctionImg, box.x, box.y + 112);
 }
 
 function act5B() {
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 2, 4:30am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("You missed out on a golden opportunity and went home to play video games all night. While playing on your ", box.x + 15, box.y + 25);
+  text("xbox360 you were sniping some kids in Call Of Duty, when suppenly the game crashes and you see a red", box.x + 70, box.y + 50);
+  text("ring around the xbox360 logo. You were then force to play on your Wii U what a tradegy.", box.x + 350, box.y + 75);
   image(videogameImg, box.x, box.y + 112);
 }
 
 function act5C() {
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("FOOD WIN", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("You pick Subway to stay kinda healthy and you go in to order your favorite, the pizza sub. When you", box.x + 15, box.y + 25);
+  text("reach the checkout as you tap your debit, suddenly confetti flys everywhere and the worker says", box.x + 70, box.y + 50);
+  text("you are the 1 millionth custumer at this subway and you win free subs for life.", box.x + 350, box.y + 75);
   image(subsWinImg, box.x, box.y + 112);
 }
 
 function act5D() {
 
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 12:00am", box.x + 15, box.y - 20);
   textSize(18);
-  text("When you get to school you realize how sweaty you've gotten from biking so fast but you never really had a choice", box.x + 15, box.y + 25);
-  text("choice because you were so late. As you enter the classroom everyone stares at you and the teacher turns ", box.x + 70, box.y + 50);
-  text(" around with a maniacal grin and asks why you are late.", box.x + 350, box.y + 75);
+  text("You go into Mc Donalds and order icecream but there machine was OUT OF ORDER so you settle for a Big ", box.x + 15, box.y + 25);
+  text("Mac Meal. It takes a few minutes but you eventualy get your food. As your eating the Big Mac you", box.x + 70, box.y + 50);
+  text("start to feel wierd and then puke all over the resturunt. They take you to the hospital where", box.x + 350, box.y + 75);
+  text("the doctor says you were heavly food poisoned.", box.x + 350, box.y + 100);
   image(poisonImg, box.x, box.y + 112);
+}
+function act6A() {
+
+  textSize(50);
+  text("MONEY ENING", box.x + 15, box.y - 20);
+  textSize(18);
+  text("Brads dad starts the bid for the Roman ring and immediately a man in a black tux bids 1 million dollars. ", box.x + 15, box.y + 25);
+  text("Everyones mouths drop but then right after a man in a white tux bids 2.5 million. The two continue", box.x + 70, box.y + 50);
+  text("until suddenly a women bids 100 million dolars. Going 1,2,3 SOLD. The women says shes from the.", box.x + 350, box.y + 75);
+  text("New York museum as was looking for rare artifacts. You then get a huge check.", box.x + 350, box.y + 100);
+  image(moneyWinImg, box.x, box.y + 112);
 }
