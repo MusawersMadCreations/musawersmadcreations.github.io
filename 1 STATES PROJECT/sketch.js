@@ -396,8 +396,8 @@ function act3C() {
 }
 
 function act3D() {
-  button.words = "Go Out", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Stay At School ", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Go Out", button.textsize = 30, buttontext.x = 1327, box.width = 925;
+  button2.words = "Stay At School ", button2.textsize = 30, buttontext2.x = 1280;
   if (buttonIsPressed) {
     state = "act4E";
     buttonIsPressed = false;
@@ -419,8 +419,8 @@ function act3D() {
 }
 
 function act4A() {
-  button.words = "Go To Auction", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Go Home", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Go To Auction", button.textsize = 30, buttontext.x = 1283, box.width = 925;
+  button2.words = "Go Home", button2.textsize = 30, buttontext2.x = 1315;
   if (buttonIsPressed) {
     state = "act5A";
     buttonIsPressed = false;
@@ -478,7 +478,7 @@ function act4D() {
 }
 
 function act4E() {
-  button.words = "Subway", button.textsize = 30, buttontext.x = 1320, box.width = 925;
+  button.words = "Subway", button.textsize = 30, buttontext.x = 1322, box.width = 925;
   button2.words = "Mc Donalds", button2.textsize = 30, buttontext2.x = 1299;
   if (buttonIsPressed) {
     state = "act5C";
@@ -502,18 +502,18 @@ function act4E() {
 
 function act4F() {
   textSize(50);
-  text("Day 1, 10:30am", box.x + 15, box.y - 20);
+  text("Day 1, 12:30pm", box.x + 15, box.y - 20);
   textSize(18);
   text("You choose save some money and not eat lunch, insted you go to the washroom and enter a stall to take a dump.", box.x + 15, box.y + 25);
-  text("While in there you have your headphones in and your jamming not aware that the fire alarm was pulled.", box.x + 70, box.y + 50);
-  text("Eventualy you start to smell smoke and get out of the stall only to see a blaze of fire all around.", box.x + 350, box.y + 75);
-  text("you but it was to late. You were burnt to a crisp.", box.x + 350, box.y + 100);
+  text("While in there you have your headphones in and your jamming not aware that the fire alarm was pulled.", box.x + 50, box.y + 50);
+  text("Eventualy you start to smell smoke and get out of the stall only to see a blaze of fire all around.", box.x + 90, box.y + 75);
+  text("you but it was to late. You were burnt to a crisp.", box.x + 275, box.y + 100);
   image(fireImg, box.x, box.y + 112);
 }
 
 function act5A() {
-  button.words = "Sell it", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "... Dont be stupid", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Sell it", button.textsize = 30, buttontext.x = 1333, box.width = 925;
+  button2.words = "... Dont be stupid", button2.textsize = 30, buttontext2.x = 1267;
   if (buttonIsPressed) {
     state = "act6A";
     buttonIsPressed = false;
@@ -527,10 +527,10 @@ function act5A() {
   textSize(50);
   text("Day 1, 7:30pm", box.x + 15, box.y - 20);
   textSize(18);
-  text("Brad picks you up at your place and takes you to his dads auction. When you get there you guys go show brads dad  ", box.x + 15, box.y + 25);
-  text("the ring. He studies it for a good 5 minutes then shockingly tell you that this was a ring from 2000 years ago", box.x + 70, box.y + 50);
-  text("from the time of Jusius Ceaser. He then says that it is worth a fortune and you should highly consider.", box.x + 350, box.y + 75);
-  text("selling. What will you do?", box.x + 350, box.y + 100);
+  text("Brad picks you up at your place and takes you to his dads auction. When you get there you guys go show brads", box.x + 17, box.y + 25);
+  text("dad the ring. He studies it for a good 5 minutes then shockingly tell you that this was a ring from 2000 years ago", box.x + 21, box.y + 50);
+  text("from the time of Jusius Ceaser. He then says that it is worth a fortune and you should highly consider.", box.x + 69, box.y + 75);
+  text("selling. What will you do?", box.x + 357, box.y + 100);
   image(auctionImg, box.x, box.y + 112);
 }
 
