@@ -92,9 +92,6 @@ function makeButton2() {
 }
 
 function youWin(){
-<<<<<<< HEAD
-  text(YOU,x,y,[x2],[y2])
-=======
   textSize(150);
   text("YOU", box.x + 950, box.y + 225);
   text("WIN", box.x + 975, box.y + 400);
@@ -104,7 +101,6 @@ function youLose(){
   textSize(125);
   text("YOU", box.x + 950, box.y + 225);
   text("LOSE", box.x + 930, box.y + 400);
->>>>>>> 2aa8817ca59253ee0d4882ba3d29700dd45e92a4
 }
 
 function playstory() {
@@ -383,7 +379,7 @@ function act3B() {
   textSize(18);
   text("When you get to school you you see that same rusty truck that almost ran you over along with the culprits.", box.x + 40, box.y + 25);
   text("They look like there dealing something so it might be best to just walk away and ingnore them but a ", box.x + 67, box.y + 50);
-  text("part of you wants to confront them, what do you do?", box.x + 275, box.y + 75);
+  text("part of you wants to confront them, what do you do?", box.x + 260, box.y + 75);
   image(bullyImg, box.x, box.y + 112);
 
 }
@@ -449,11 +445,11 @@ function act4A() {
 function act4B() {
   textSize(50);
   text("Day 1, 5:10pm", box.x + 15, box.y - 20);
-  textSize(16);
-  text("Charlie somehow convices you to come rob this gas station with him. While there he pulls out a bb gun with the", box.x + 45, box.y + 25);
-  text("tip painted black and points it at the owner while you fill a bag with cash and some skittles. Five minutes", box.x + 55, box.y + 50);
-  text("later cops show and arrest you guys right when you are about to leave. And take you to a holding cell", box.x + 35, box.y + 75);
-  text("and take you to a holding cell where you await the trail", box.x + 220, box.y + 100);
+  textSize(18);
+  text("Charlie somehow convices you to come rob this gas station with him. While there he pulls out a bb gun with the", box.x + 22, box.y + 25);
+  text("tip painted black and points it at the owner while you fill a bag with cash and some skittles. Five minutes", box.x + 53, box.y + 50);
+  text("later cops show and arrest you guys right when you are about to leave. And take you to a holding cell", box.x + 60, box.y + 75);
+  text("and take you to a holding cell where you await the trail", box.x + 240, box.y + 100);
   image(jailImg, box.x, box.y + 112);
 
 }
@@ -462,9 +458,9 @@ function act4C() {
   textSize(50);
   text("Day 1, 1:30pm", box.x + 15, box.y - 20);
   textSize(18);
-  text("You go up to the 2 knuckle heads and yell WTF, learn to drive. They come closer and start laughing at you then ", box.x + 15, box.y + 25);
-  text("suddenly he pushes you down and the other kid kicks you repeatly for a couple minutes until you black out.", box.x + 70, box.y + 50);
-  text("When you wake up your in the hospital and you feel terrible.", box.x + 350, box.y + 75);
+  text("You go up to the 2 knuckle heads and yell WTF, learn to drive. They come closer and start laughing at you then ", box.x + 25, box.y + 25);
+  text("suddenly he pushes you down and the other kid kicks you repeatly for a couple minutes until you black out.", box.x + 43, box.y + 50);
+  text("When you wake up your in the hospital and you feel terrible.", box.x + 230, box.y + 75);
   image(hospitalImg, box.x, box.y + 112);
 
 }
@@ -473,17 +469,17 @@ function act4D() {
   textSize(50);
   text("Day 1, 1:30am", box.x + 15, box.y - 20);
   textSize(18);
-  text("You choose to hold in your anger and walk by without saying anything. They still notice you and start coming ", box.x + 15, box.y + 25);
-  text("closer. Then they start calling you a crybaby and one of them pushes you down, you stick out your foot and   ", box.x + 70, box.y + 50);
-  text("trip him but another guy kicks you repeatedly until you black out. When you wake up you're ", box.x + 350, box.y + 75);
-  text("in the hospital and everthing hurts.", box.x + 350, box.y + 100);
+  text("You choose to hold in your anger and walk by without saying anything. They still notice you and start coming ", box.x + 35, box.y + 25);
+  text("closer. Then they start calling you a crybaby and one of them pushes you down, you stick out your foot and   ", box.x + 40, box.y + 50);
+  text("trip him but another guy kicks you repeatedly until you black out. When you wake up you're ", box.x + 115, box.y + 75);
+  text("in the hospital and everthing hurts.", box.x + 340, box.y + 100);
   image(hospitalImg, box.x, box.y + 112);
 
 }
 
 function act4E() {
-  button.words = "Subway", button.textsize = 30, buttontext.x = 1297, box.width = 925;
-  button2.words = "Mc Donalds", button2.textsize = 30, buttontext2.x = 1297;
+  button.words = "Subway", button.textsize = 30, buttontext.x = 1320, box.width = 925;
+  button2.words = "Mc Donalds", button2.textsize = 30, buttontext2.x = 1299;
   if (buttonIsPressed) {
     state = "act5C";
     buttonIsPressed = false;
@@ -497,9 +493,9 @@ function act4E() {
   textSize(50);
   text("Day 1, 11:45am", box.x + 15, box.y - 20);
   textSize(18);
-  text("You start walking towards the plaza of food stores and you see a Subway right beside a McDonalds.", box.x + 15, box.y + 25);
-  text("Since you dont have too much money these are your only options, do you stay kinda healthy and ", box.x + 70, box.y + 50);
-  text("eat at Subway or treat your self to McDonalds.", box.x + 350, box.y + 75);
+  text("You start walking towards the plaza of food stores and you see a Subway right beside a McDonalds.", box.x + 60, box.y + 25);
+  text("Since you dont have too much money these are your only options, do you stay kinda healthy and ", box.x + 75, box.y + 50);
+  text("eat at Subway or treat your self to McDonalds.", box.x + 273, box.y + 75);
   image(fastFoodImg, box.x, box.y + 112);
 
 }
