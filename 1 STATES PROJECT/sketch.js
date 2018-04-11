@@ -2,7 +2,7 @@
 // Musawer
 // March 6, 2018
 
-// let boxAnimation;
+
 let state;
 let inventory;
 let buttonIsPressed, button2IsPressed;
@@ -62,7 +62,6 @@ function setup() {
   background(255);
   state = "startScreen";
   // inventory = [];
-  // boxAnimation = rect(button.x - 10, button.y - 10, 275, 90);
 }
 
 function draw() {
@@ -538,9 +537,9 @@ function act5B() {
   textSize(50);
   text("Day 2, 4:30am", box.x + 15, box.y - 20);
   textSize(18);
-  text("You missed out on a golden opportunity and went home to play video games all night. While playing on your ", box.x + 15, box.y + 25);
-  text("xbox360 you were sniping some kids in Call Of Duty, when suppenly the game crashes and you see a red", box.x + 70, box.y + 50);
-  text("ring around the xbox360 logo. You were then force to play on your Wii U what a tragedy.", box.x + 350, box.y + 75);
+  text("You missed out on a golden opportunity and went home to play video games all night. While playing on your ", box.x + 35, box.y + 25);
+  text("xbox360 you were sniping some kids in Call Of Duty, when suppenly the game crashes and you see a red", box.x + 45, box.y + 50);
+  text("ring around the xbox360 logo. You were then force to play on your Wii U what a tragedy.", box.x + 105, box.y + 75);
   image(videogameImg, box.x, box.y + 112);
 }
 
@@ -548,9 +547,9 @@ function act5C() {
   textSize(50);
   text("FOOD WIN", box.x + 15, box.y - 20);
   textSize(18);
-  text("You pick Subway to stay kinda healthy and you go in to order your favorite, the pizza sub. When you", box.x + 15, box.y + 25);
-  text("reach the checkout as you tap your debit, suddenly confetti flys everywhere and the worker says", box.x + 70, box.y + 50);
-  text("you are the 1 millionth custumer at this subway and you win free subs for life.", box.x + 350, box.y + 75);
+  text("You pick Subway to stay kinda healthy and you go in to order your favorite, the pizza sub. When you", box.x + 57, box.y + 25);
+  text("reach the checkout as you tap your debit, suddenly confetti flys everywhere and the worker says", box.x + 80, box.y + 50);
+  text("you are the 1 millionth custumer at this subway and you win free subs for life.", box.x + 150, box.y + 75);
   image(subsWinImg, box.x, box.y + 112);
 }
 
@@ -558,10 +557,10 @@ function act5D() {
   textSize(50);
   text("Day 1, 12:00am", box.x + 15, box.y - 20);
   textSize(18);
-  text("You go into Mc Donalds and order icecream but there machine was OUT OF ORDER so you settle for a Big ", box.x + 15, box.y + 25);
-  text("Mac Meal. It takes a few minutes but you eventualy get your food. As your eating the Big Mac you", box.x + 70, box.y + 50);
-  text("start to feel wierd and then puke all over the resturunt. They take you to the hospital where", box.x + 350, box.y + 75);
-  text("the doctor says you were heavly food poisoned.", box.x + 350, box.y + 100);
+  text("You go into Mc Donalds and order icecream but there machine was OUT OF ORDER so you settle for a Big ", box.x + 35, box.y + 25);
+  text("Mac Meal. It takes a few minutes but you eventualy get your food. As your eating the Big Mac you", box.x + 78, box.y + 50);
+  text("start to feel wierd and then puke all over the resturunt. They take you to the hospital where", box.x + 110, box.y + 75);
+  text("the doctor says you were heavly food poisoned.", box.x + 270, box.y + 100);
   image(poisonImg, box.x, box.y + 112);
 }
 
@@ -569,9 +568,9 @@ function act6A() {
   textSize(50);
   text("MONEY ENDING", box.x + 15, box.y - 20);
   textSize(18);
-  text("Brads dad starts the bid for the Roman ring and immediately a man in a black tux bids 1 million dollars. ", box.x + 15, box.y + 25);
-  text("Everyones mouths drop but then right after a man in a white tux bids 2.5 million. The two continue", box.x + 70, box.y + 50);
-  text("until suddenly a women bids 100 million dolars. Going 1,2,3 SOLD. The women says shes from the.", box.x + 350, box.y + 75);
-  text("New York museum as was looking for rare artifacts. You then get a huge check.", box.x + 350, box.y + 100);
+  text("Brads dad starts the bid for the Roman ring and immediately a man in a black tux bids 1 million dollars. ", box.x + 50, box.y + 25);
+  text("Everyones mouths drop but then right after a man in a white tux bids 2.5 million. The two continue", box.x + 75, box.y + 50);
+  text("until suddenly a women bids 100 million dolars. Going 1,2,3 SOLD. The women says shes from the.", box.x + 71, box.y + 75);
+  text("New York museum as was looking for rare artifacts. You then get a huge check.", box.x + 150, box.y + 100);
   image(moneyWinImg, box.x, box.y + 112);
 }
