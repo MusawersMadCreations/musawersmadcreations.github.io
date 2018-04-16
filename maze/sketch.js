@@ -40,7 +40,7 @@ let cols = 25;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  cellSize = 50;
+  cellSize = 25;
   frameRate(10);
 
 }
@@ -68,8 +68,27 @@ function drawBoard() {
     }
   }
 }
-function shrinkmaze(){
-  if (frameCount >= 50) {
-    level1[1] = increaseWall;
+
+  function mazeRunner(){
+    fill(0);
+    rect(50, 0, cellSize, cellSize);
   }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function shrinkmaze(){
+//   if (frameCount >= 50) {
+//     level1[1] = increaseWall;
+//   }
+// }
