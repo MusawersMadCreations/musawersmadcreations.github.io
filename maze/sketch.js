@@ -31,8 +31,7 @@ let level1 = [
   [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],
 ];
 
-let increaseWall = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-let isWall;
+let closedWall = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 let cellSize;
 let rows = 25;
 let cols = 25;
@@ -41,7 +40,7 @@ let cols = 25;
 function setup() {
   createCanvas(windowWidth, windowHeight);
   cellSize = 50;
-  frameRate(10);
+  frameRate();
 
 }
 
@@ -54,22 +53,17 @@ function draw() {
 
 
 function drawBoard() {
-  for (let x = 0; x < cols; x++) {
-    for (let y = 0; y < rows; y++) {
+  for (let x = 0; x < rows; x++) {
+    for (let y = 0; y < cols; y++) {
       if (level1[x][y] === 0) {
         fill(0);
         rect(x * cellSize, y * cellSize, cellSize, cellSize);
       }
+
       else {
-        fill(255);
+        fill(120);
         rect(x * cellSize, y * cellSize, cellSize, cellSize);
       }
-
     }
-  }
-}
-function shrinkmaze(){
-  if (frameCount >= 50) {
-    level1[1] = increaseWall;
   }
 }
