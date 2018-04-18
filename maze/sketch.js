@@ -47,7 +47,7 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(700, 700);
   direction = "right";
   cellSize = 25;
   playerx = cellSize;
@@ -126,39 +126,63 @@ function drawBoardAndExpandLava() {
       } else if (frameCount >= lavaspeed) {
         level1[j][0] = 6;
         level1[j][24] = 6;
+        level1[0] = increaseWall
+        level1[24] = increaseWall
           if (frameCount >= lavaspeed * 2) {
             level1[j][1] = 6;
             level1[j][23] = 6;
+            level1[1] = increaseWall
+            level1[23] = increaseWall
           }if (frameCount >= lavaspeed * 3) {
              level1[j][2] = 6;
              level1[j][22] = 6;
+             level1[2] = increaseWall
+             level1[22] = increaseWall
            }if (frameCount >= lavaspeed * 4) {
              level1[j][3] = 6;
              level1[j][21] = 6;
+             level1[3] = increaseWall
+             level1[21] = increaseWall
            }if (frameCount >= lavaspeed * 5) {
              level1[j][4] = 6;
              level1[j][20] = 6;
+             level1[4] = increaseWall
+             level1[20] = increaseWall
            }if (frameCount >= lavaspeed * 6) {
              level1[j][5] = 6;
              level1[j][19] = 6;
+             level1[5] = increaseWall
+             level1[19] = increaseWall
            }if (frameCount >= lavaspeed * 7) {
              level1[j][6] = 6;
              level1[j][18] = 6;
+             level1[6] = increaseWall
+             level1[18] = increaseWall
            }if (frameCount >= lavaspeed *8) {
              level1[j][7] = 6;
              level1[j][17] = 6;
+             level1[7] = increaseWall
+             level1[17] = increaseWall
            }if (frameCount >= lavaspeed* 9) {
              level1[j][8] = 6;
              level1[j][16] = 6;
+             level1[8] = increaseWall
+             level1[16] = increaseWall
            }if (frameCount >= lavaspeed* 10) {
              level1[j][9] = 6;
              level1[j][15] = 6;
+             level1[9] = increaseWall
+             level1[15] = increaseWall
            }if (frameCount >= lavaspeed * 11) {
              level1[j][10] = 6;
              level1[j][14] = 6;
+             level1[10] = increaseWall
+             level1[14] = increaseWall
            }if (frameCount >= lavaspeed * 12) {
              level1[j][11] = 6;
              level1[j][13] = 6;
+             level1[11] = increaseWall
+             level1[13] = increaseWall
            }
 
       } else {
@@ -167,55 +191,6 @@ function drawBoardAndExpandLava() {
         rect(i * cellSize, j * cellSize, cellSize, cellSize);
 
       }
-    }
-
-    if (frameCount >= lavaspeed) {
-      level1[0] = increaseWall
-      level1[24] = increaseWall
-    }
-    if (frameCount >= lavaspeed * 2) {
-      level1[1] = increaseWall
-      level1[23] = increaseWall
-    }
-    if (frameCount >= lavaspeed * 3) {
-      level1[2] = increaseWall
-      level1[22] = increaseWall
-    }
-    if (frameCount >= lavaspeed * 4) {
-      level1[3] = increaseWall
-      level1[21] = increaseWall
-    }
-    if (frameCount >= lavaspeed * 5) {
-      level1[4] = increaseWall
-      level1[20] = increaseWall
-    }
-    if (frameCount >= lavaspeed * 6) {
-      level1[5] = increaseWall
-      level1[19] = increaseWall
-    }
-    if (frameCount >= lavaspeed * 7) {
-      level1[6] = increaseWall
-      level1[18] = increaseWall
-    }
-    if (frameCount >= lavaspeed * 8) {
-      level1[7] = increaseWall
-      level1[17] = increaseWall
-    }
-    if (frameCount >= lavaspeed * 9) {
-      level1[8] = increaseWall
-      level1[16] = increaseWall
-    }
-    if (frameCount >= lavaspeed * 10) {
-      level1[9] = increaseWall
-      level1[15] = increaseWall
-    }
-    if (frameCount >= lavaspeed * 11) {
-      level1[10] = increaseWall
-      level1[14] = increaseWall
-    }
-    if (frameCount >= lavaspeed * 12) {
-      level1[11] = increaseWall
-      level1[13] = increaseWall
     }
   }
 }
