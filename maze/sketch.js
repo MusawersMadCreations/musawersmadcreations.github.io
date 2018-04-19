@@ -75,9 +75,7 @@ function draw() {
   ladderWin()
   winScreen();
   gameOverScreen();
-  print(playerx,playery);
-
-
+  print(xcoord,ycoord);
 
 }
 
@@ -112,9 +110,10 @@ function moveRunner() {
       if (direction === "right") {
         playerx += cellSize;
         score += 1;
-        if (playerx >= 738) {
+        if (playerx >= 738 || level1[xcoord][ycoord] === 0) {
           playerx -= cellSize;
           score -= 1;
+
 
         }
       }
