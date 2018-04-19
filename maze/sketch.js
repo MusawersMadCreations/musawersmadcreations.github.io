@@ -111,21 +111,15 @@ function moveRunner() {
       if (direction === "right") {
         playerx += cellSize;
         score += 1;
-<<<<<<< HEAD
-        if (playerx >= 738) {
-=======
-        if (playerx >= 738) { //|| level1[xcoord][ycoord] === 0
->>>>>>> 8306350869db4677bab3d42f2931a81846b125c3
+        if (playerx >= 738 || level1[ycoord][xcoord] === 0) {
           playerx -= cellSize;
           score -= 1;
-
-
         }
       }
       if (direction === "down") {
         playery += cellSize;
         score += 1;
-        if (playery >= 738) {
+        if (playery >= 738 || level1[ycoord][xcoord] === 0) {
           playery -= cellSize;
           score -= 1;
         }
@@ -133,7 +127,7 @@ function moveRunner() {
       if (direction === "left") {
         playerx -= cellSize;
         score += 1;
-        if (playerx <= 0) {
+        if (playerx <= 0 || level1[ycoord][xcoord] === 0) {
           playerx += cellSize;
           score -= 1;
         }
@@ -141,7 +135,7 @@ function moveRunner() {
       if (direction === "up") {
         playery -= cellSize;
         score += 1;
-        if (playery <= 0) {
+        if (playery <= 0 || level1[ycoord][xcoord] === 0) {
           playery += cellSize;
           score -= 1;
         }
