@@ -42,6 +42,7 @@ let cols = 25;
 let lavaspeed;
 let score;
 let wallImg, ladderImg, lavaImg;
+let speed;
 
 function preload() {
   wallImg = loadImage("images/wall.jpg");
@@ -55,7 +56,7 @@ function setup() {
   cellSize = 30.75;
   playerx = cellSize;
   playery = cellSize;
-  speed = 2
+  speed = 2;
   lavaspeed = 22.25;
   frameRate(10);
   score = 0;
@@ -152,15 +153,15 @@ function drawBoardAndExpandLava() {
         image(wallImg, i * cellSize, j * cellSize, cellSize, cellSize);
         wallLocation.push(0);
       } else if (level1[j][i] === 6) {
-        image(lavaImg, i * cellSize, j * cellSize, cellSize, cellSize)
+        image(lavaImg, i * cellSize, j * cellSize, cellSize, cellSize);
       } else if (level1[j][i] === "L") {
-        image(ladderImg, i * cellSize, j * cellSize, cellSize, cellSize)
+        image(ladderImg, i * cellSize, j * cellSize, cellSize, cellSize);
 // Expanding lava
       } else if (frameCount >= lavaspeed) {
         level1[j][0] = 6;
         level1[j][24] = 6;
-        level1[0] = increaseWall
-        level1[24] = increaseWall
+        level1[0] = increaseWall;
+        level1[24] = increaseWall;
         if (frameCount >= lavaspeed * 2) {
           level1[j][1] = 6;
           level1[j][23] = 6;
