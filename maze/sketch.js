@@ -110,7 +110,7 @@ function moveRunner() {
       if (direction === "right") {
         playerx += cellSize;
         score += 1;
-        if (playerx >= 738 || level1[xcoord][ycoord] === 0) {
+        if (playerx >= 738) {
           playerx -= cellSize;
           score -= 1;
 
