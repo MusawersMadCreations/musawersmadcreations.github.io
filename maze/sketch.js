@@ -40,6 +40,7 @@ let rows = 25;
 let cols = 25;
 let lavaspeed;
 let score;
+let speed;
 let wallImg, ladderImg, lavaImg;
 let xcoord, ycoord;
 
@@ -56,7 +57,7 @@ function setup() {
   cellSize = 30.75;
   playerx = cellSize;
   playery = cellSize;
-  speed = 2
+  speed = 2;
   lavaspeed = 22.25;
   score = 0;
   frameRate(10);
@@ -72,7 +73,7 @@ function draw() {
   moveRunner();
   makeRunner();
   death();
-  ladderWin()
+  ladderWin();
   winScreen();
   gameOverScreen();
   print(xcoord,ycoord);
@@ -110,7 +111,11 @@ function moveRunner() {
       if (direction === "right") {
         playerx += cellSize;
         score += 1;
+<<<<<<< HEAD
         if (playerx >= 738) {
+=======
+        if (playerx >= 738) { //|| level1[xcoord][ycoord] === 0
+>>>>>>> 8306350869db4677bab3d42f2931a81846b125c3
           playerx -= cellSize;
           score -= 1;
 
