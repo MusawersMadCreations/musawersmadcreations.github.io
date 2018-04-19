@@ -57,7 +57,7 @@ function setup() {
   playerx = cellSize;
   playery = cellSize;
   speed = 2
-  lavaspeed = 2222.25;
+  lavaspeed = 22.25;
   score = 0;
   frameRate(10);
 }
@@ -72,7 +72,12 @@ function draw() {
   moveRunner();
   makeRunner();
   death();
+  ladderWin()
+  winScreen();
   gameOverScreen();
+  print(playerx,playery);
+
+
 
 }
 
@@ -107,15 +112,16 @@ function moveRunner() {
       if (direction === "right") {
         playerx += cellSize;
         score += 1;
-        if (playerx >= 738 || level1[xcoord][ycoord] === 0) {
+        if (playerx >= 738) {
           playerx -= cellSize;
           score -= 1;
+
         }
       }
       if (direction === "down") {
         playery += cellSize;
         score += 1;
-        if (playery >= 738|| level1[xcoord][ycoord] === 0) {
+        if (playery >= 738) {
           playery -= cellSize;
           score -= 1;
         }
@@ -123,7 +129,7 @@ function moveRunner() {
       if (direction === "left") {
         playerx -= cellSize;
         score += 1;
-        if (playerx <= 0|| level1[xcoord][ycoord] === 0) {
+        if (playerx <= 0) {
           playerx += cellSize;
           score -= 1;
         }
@@ -131,7 +137,7 @@ function moveRunner() {
       if (direction === "up") {
         playery -= cellSize;
         score += 1;
-        if (playery <= 0|| level1[xcoord][ycoord] === 0) {
+        if (playery <= 0) {
           playery += cellSize;
           score -= 1;
         }
@@ -262,8 +268,6 @@ function collision() {
 }
 
 function death() {
-  xcoord = floor(playerx / cellSize);
-  ycoord = floor(playery / cellSize);
   if (level1[xcoord][ycoord] === 6) {
     state = "dead";
     return true;
@@ -273,9 +277,7 @@ function death() {
 }
 
 function ladderWin() {
-  xcoord = floor(playerx / cellSize);
-  ycoord = floor(playery / cellSize);
-  if (level1[xcoord][ycoord] === 6) {
+  if (level1[xcoord][ycoord] === "L") {
     state = "win";
     return true;
   } else {
@@ -302,10 +304,11 @@ function gameOverScreen() {
 }
 
 function winScreen() {
+  textAlign(CENTER);
   if (state === "win") {
-    textFont(200);
-    fill(0, 0, 255);
-    text("YOUWIN" / 2, height / 2 - 100);
+    textSize(200);
+    fill(0, 255, 0);
+    text("YOUWIN", width/ 2, height / 2 - 35);
     fill(0);
     textSize(75);
     text("Finished In " + score + " Moves", width / 2, height / 2 + 50);
