@@ -95,7 +95,6 @@ function keyPressed() {
       direction = "left";
     }
     if (key === "d" || key === "D") {
-
       direction = "right";
     }
   }
@@ -114,10 +113,10 @@ function moveRunner() {
       if (direction === "right") {
         playerCanMove;
         score += 1;
-        if (playerx >= 738 || level1[ycoord][xcoord] === 0) {
-          score -= 1;
-          playerCanMove = playerx;
-        }
+        // if (playerx >= 738 || level1[ycoord][xcoord] === 0) {
+        //   score -= 1;
+        //   playerCanMove = playerx;
+        // }
       }
       if (direction === "down") {
         playery += cellSize;
