@@ -96,6 +96,8 @@ function keyPressed() {
     }
     if (key === "d" || key === "D") {
       direction = "right";
+      if (playerx >= 738 || level1[ycoord][xcoord - 1]){
+        playery -= cellSize;
     }
   }
 }
