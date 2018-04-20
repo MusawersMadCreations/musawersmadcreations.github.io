@@ -60,7 +60,7 @@ function setup() {
   playery = cellSize;
   playerCanMove = playerx += cellSize;
   speed = 2;
-  lavaspeed = 2222.25;
+  lavaspeed = 22.25;
   score = 0;
   frameRate(10);
 }
@@ -78,7 +78,6 @@ function draw() {
   ladderWin();
   winScreen();
   gameOverScreen();
-  print(xcoord,ycoord);
 
 }
 
@@ -111,12 +110,8 @@ function moveRunner() {
   if (state === "game") {
     if (frameCount % speed === 0) {
       if (direction === "right") {
-        playerCanMove;
+        playerx += cellSize;
         score += 1;
-        // if (playerx >= 738 || level1[ycoord][xcoord] === 0) {
-        //   score -= 1;
-        //   playerCanMove = playerx;
-        // }
       }
       if (direction === "down") {
         playery += cellSize;
