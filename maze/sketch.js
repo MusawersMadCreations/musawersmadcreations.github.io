@@ -43,6 +43,7 @@ let score;
 let speed;
 let wallImg, ladderImg, lavaImg;
 let xcoord, ycoord;
+let playerCanMove;
 
 function preload() {
   wallImg = loadImage("images/wall.jpg");
@@ -57,8 +58,9 @@ function setup() {
   cellSize = 30.75;
   playerx = cellSize;
   playery = cellSize;
+  playerCanMove = playerx += cellSize;
   speed = 2;
-  lavaspeed = 22.25;
+  lavaspeed = 2222.25;
   score = 0;
   frameRate(10);
 }
@@ -93,6 +95,7 @@ function keyPressed() {
       direction = "left";
     }
     if (key === "d" || key === "D") {
+
       direction = "right";
     }
   }
@@ -109,11 +112,11 @@ function moveRunner() {
   if (state === "game") {
     if (frameCount % speed === 0) {
       if (direction === "right") {
-        playerx += cellSize;
+        playerCanMove;
         score += 1;
         if (playerx >= 738 || level1[ycoord][xcoord] === 0) {
-          playerx -= cellSize;
           score -= 1;
+          playerCanMove = playerx;
         }
       }
       if (direction === "down") {
