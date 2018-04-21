@@ -42,37 +42,35 @@ let lavaspeed;
 let score;
 let speed;
 let wallImg, ladderImg, lavaImg;
-let gameMP3, crashMP3, loseMP3;
+let gameMp3, crashMp3, winMp3, loseMp3, moveMp3;
 let xcoord, ycoord;
-
+let playerCanMove;
 
 function preload() {
   wallImg = loadImage("images/wall.jpg");
   ladderImg = loadImage("images/ladder.png");
   lavaImg = loadImage("images/lava.jpg");
-  gameMP3 = loadSound("music/theme.mp3");
-  crashMP3 = loadSound("music/crash.mp3");
-  loseMP3 = loadSound("music/lose.mp3");
+  gameMp3 = loadSound("sound/theme.mp3");
+  moveMp3 = loadSound("sound/move.wav");
+  winMp3 = loadSound("sound/win.wav");
+  loseMp3 = loadSound("sound/lose.mp3");
+  crashMp3 = loadSound("sound/crash.mp3");
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  gameMP3.play();
   state = "game";
   direction = "right";
   cellSize = 30.75;
   playerx = cellSize;
   playery = cellSize;
-<<<<<<< HEAD
-  speed = 2;
-  lavaspeed = 22.25;
-=======
   playerCanMove = playerx += cellSize;
   speed = 3;
   lavaspeed = 22;
->>>>>>> a82bfb3b78747770ae4859c08a8a9afe7667c227
   score = 0;
   frameRate(10);
+  moveMp3.setVolume(0.5);
+  gameMp3.play();
 }
 
 function draw() {
@@ -88,29 +86,29 @@ function draw() {
   ladderWin();
   winScreen();
   gameOverScreen();
-  print(xcoord,ycoord);
-
 }
 
 
 function keyPressed() {
   if (state === "game") {
     if (key === "w" || key === "W") {
+      moveMp3.play();
       direction = "up";
     }
     if (key === "s" || key === "S") {
+      moveMp3.play();
       direction = "down";
     }
     if (key === "a" || key === "A") {
+      moveMp3.play();
       direction = "left";
     }
     if (key === "d" || key === "D") {
+      moveMp3.play();
       direction = "right";
-
-      }
     }
   }
-
+}
 
 function makeRunner() {
   if (state === "game") {
@@ -123,14 +121,9 @@ function moveRunner() {
   if (state === "game") {
     if (frameCount % speed === 0) {
       if (direction === "right") {
-<<<<<<< HEAD
-        playerx += cellSize;
-        score += 1;
-=======
         if (playerx >= 738 || level1[ycoord][xcoord + 1] === 0) {
           score -= 1;
           playerx -= cellSize;
->>>>>>> a82bfb3b78747770ae4859c08a8a9afe7667c227
         }
         playerx += cellSize;
         score += 1;
@@ -155,17 +148,13 @@ function moveRunner() {
         if (playery <= 0 || level1[ycoord - 1][xcoord] === 0) {
           playery += cellSize;
           score -= 1;
-<<<<<<< HEAD
-=======
         }
         playery -= cellSize;
         score += 1;
->>>>>>> a82bfb3b78747770ae4859c08a8a9afe7667c227
       }
     }
   }
 }
-
 
 
 function drawBoardAndExpandLava() {
