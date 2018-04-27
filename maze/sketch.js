@@ -41,7 +41,7 @@ let lavaspeed;
 let score;
 let speed;
 let wallImg, ladderImg, lavaImg;
-let gameMp3, crashMp3, moveMp3;
+let gameMp3, moveMp3;
 let xcoord, ycoord;
 
 function preload() { //loading assets
@@ -50,7 +50,6 @@ function preload() { //loading assets
   lavaImg = loadImage("images/lava.jpg");
   gameMp3 = loadSound("sound/theme.mp3");
   moveMp3 = loadSound("sound/move.wav");
-  crashMp3 = loadSound("sound/crash.mp3");
 }
 
 function setup() {
@@ -65,7 +64,6 @@ function setup() {
   score = 0;
   frameRate(10);
   moveMp3.setVolume(0.5);
-  crashMp3.setVolume(0.5);
   gameMp3.play();
 }
 
